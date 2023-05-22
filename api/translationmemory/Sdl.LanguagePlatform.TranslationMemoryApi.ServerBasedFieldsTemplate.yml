@@ -387,7 +387,7 @@ items:
   remarks: >-
     If the list of translation memories has been pre-loaded, the in-memory collection of translation memories is returned, otherwise
 
-    the list of translation memories is retrieved from the server on-demand.
+    returns null.
   syntax:
     content: public ReadOnlyCollection<ServerBasedTranslationMemory> TranslationMemories { get; }
     parameters: []

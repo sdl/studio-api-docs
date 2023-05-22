@@ -464,10 +464,7 @@ items:
   - Sdl.LanguagePlatform.TranslationMemoryApi
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the collection of translation memories associated with this language resources template.\n"
-  remarks: >-
-    If the list of translation memories has been pre-loaded, the in-memory collection of translation memories is returned, otherwise
-
-    the list of translation memories is retrieved from the server on-demand.
+  remarks: "If the list of translation memories has been pre-loaded, the in-memory collection of translation memories is returned, otherwise\nreturns null "
   syntax:
     content: public ReadOnlyCollection<ServerBasedTranslationMemory> TranslationMemories { get; }
     parameters: []

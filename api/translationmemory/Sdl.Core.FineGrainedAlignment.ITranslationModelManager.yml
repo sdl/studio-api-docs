@@ -491,6 +491,7 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
   isExternal: true
   name: Task<>
   nameWithType: Task<>

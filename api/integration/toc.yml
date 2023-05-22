@@ -1,17 +1,4 @@
 ### YamlMime:TableOfContent
-- uid: Sdl.Common.Licensing.AppSupport
-  name: Sdl.Common.Licensing.AppSupport
-  items:
-  - uid: Sdl.Common.Licensing.AppSupport.IProductLicense
-    name: IProductLicense
-  - uid: Sdl.Common.Licensing.AppSupport.LicenseStatus
-    name: LicenseStatus
-  - uid: Sdl.Common.Licensing.AppSupport.LicenseSummaryDelegate
-    name: LicenseSummaryDelegate
-  - uid: Sdl.Common.Licensing.AppSupport.Product
-    name: Product
-  - uid: Sdl.Common.Licensing.AppSupport.ProductLicenseManager
-    name: ProductLicenseManager
 - uid: Sdl.Desktop.IntegrationApi
   name: Sdl.Desktop.IntegrationApi
   items:
@@ -239,6 +226,8 @@
     name: TextBoxPlaceholderBehavior
   - uid: Sdl.Desktop.Platform.Controls.Behaviours.TimedAutoHideBehaviour
     name: TimedAutoHideBehaviour
+  - uid: Sdl.Desktop.Platform.Controls.Behaviours.TreeViewBringIntoViewWhenSelectedBehavior
+    name: TreeViewBringIntoViewWhenSelectedBehavior
   - uid: Sdl.Desktop.Platform.Controls.Behaviours.TreeViewSelectedItemChangedBehaviour
     name: TreeViewSelectedItemChangedBehaviour
   - uid: Sdl.Desktop.Platform.Controls.Behaviours.WebBrowserBindableSourceBehavior
@@ -358,6 +347,8 @@
     name: ImageDrawingToXamlConverter
   - uid: Sdl.Desktop.Platform.Controls.Converters.ImagePathToImageSourceConverter
     name: ImagePathToImageSourceConverter
+  - uid: Sdl.Desktop.Platform.Controls.Converters.ImageToBitmapImageConverter
+    name: ImageToBitmapImageConverter
   - uid: Sdl.Desktop.Platform.Controls.Converters.InverseBooleanConverter
     name: InverseBooleanConverter
   - uid: Sdl.Desktop.Platform.Controls.Converters.InverseBooleanToVisibilityConverter

@@ -9,23 +9,36 @@ items:
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.#ctor(System.Uri,System.String,System.String,System.DateTime)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.DeleteBackgroundTask(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.DeleteBackgroundTasks(System.Collections.Generic.ICollection{System.Guid})
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.Guid,Sdl.LanguagePlatform.TranslationMemoryApi.ContainerProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.String)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.String,Sdl.LanguagePlatform.TranslationMemoryApi.ContainerProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers(Sdl.LanguagePlatform.TranslationMemoryApi.ContainerProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.Guid,Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServerProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.String)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.String,Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServerProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers(Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServerProperties)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDefaultLanguageResources(System.Globalization.CultureInfo)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDefaultLanguageResources(System.String)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.Guid,Sdl.LanguagePlatform.TranslationMemoryApi.FieldsTemplateProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.String)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.String,Sdl.LanguagePlatform.TranslationMemoryApi.FieldsTemplateProperties)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates(Sdl.LanguagePlatform.TranslationMemoryApi.FieldsTemplateProperties,System.Boolean)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates(System.Boolean)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.Guid,Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourcesTemplateProperties)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.String)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.String,Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourcesTemplateProperties)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates(Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourcesTemplateProperties,System.Boolean)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates(System.Boolean)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLicensingStatusInformation
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetScheduledTranslationMemoryExport(System.Guid)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetScheduledTranslationMemoryImport(System.Guid)
+  - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories(Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryProperties)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemoriesByQuery(Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryQuery)
   - Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemoriesQueryFilters
@@ -176,7 +189,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nObtains a representation of an existing database server.\n"
   syntax:
-    content: public DatabaseServer GetDatabaseServer(Guid id, DatabaseServerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetDatabaseServer(Guid id)")]
+
+      public DatabaseServer GetDatabaseServer(Guid id, DatabaseServerProperties additionalProperties)
     parameters:
     - id: id
       type: System.Guid
@@ -187,7 +203,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer
       description: "\nThe database server, or null if no database server with the given id exists.\n"
-    content.vb: Public Function GetDatabaseServer(id As Guid, additionalProperties As DatabaseServerProperties) As DatabaseServer
+    content.vb: >-
+      <Obsolete("Please use GetDatabaseServer(Guid id)")>
+
+      Public Function GetDatabaseServer(id As Guid, additionalProperties As DatabaseServerProperties) As DatabaseServer
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">id</code> is empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetDatabaseServer(Guid id)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.Guid)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.Guid)
+  id: GetDatabaseServer(System.Guid)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetDatabaseServer(Guid)
+  nameWithType: TranslationProviderServer.GetDatabaseServer(Guid)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.Guid)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nObtains a representation of an existing database server.\n"
+  syntax:
+    content: public DatabaseServer GetDatabaseServer(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+      description: The database server id.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer
+      description: "\nThe database server, or null if no database server with the given id exists.\n"
+    content.vb: Public Function GetDatabaseServer(id As Guid) As DatabaseServer
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer*
   exceptions:
   - type: System.ArgumentNullException
@@ -216,7 +278,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nObtains a representation of an existing database server.\n"
   syntax:
-    content: public DatabaseServer GetDatabaseServer(string path, DatabaseServerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetDatabaseServer(string path)")]
+
+      public DatabaseServer GetDatabaseServer(string path, DatabaseServerProperties additionalProperties)
     parameters:
     - id: path
       type: System.String
@@ -227,7 +292,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer
       description: 'The database server, or null if no database server with the given id exists. '
-    content.vb: Public Function GetDatabaseServer(path As String, additionalProperties As DatabaseServerProperties) As DatabaseServer
+    content.vb: >-
+      <Obsolete("Please use GetDatabaseServer(string path)")>
+
+      Public Function GetDatabaseServer(path As String, additionalProperties As DatabaseServerProperties) As DatabaseServer
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">path</code> is null or empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetDatabaseServer(string path)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.String)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.String)
+  id: GetDatabaseServer(System.String)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetDatabaseServer(String)
+  nameWithType: TranslationProviderServer.GetDatabaseServer(String)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer(System.String)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nObtains a representation of an existing database server.\n"
+  syntax:
+    content: public DatabaseServer GetDatabaseServer(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the database server (note that this is not the physical server name).
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer
+      description: 'The database server, or null if no database server with the given id exists. '
+    content.vb: Public Function GetDatabaseServer(path As String) As DatabaseServer
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServer*
   exceptions:
   - type: System.ArgumentNullException
@@ -256,7 +367,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the <xref href=\"Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer\" data-throw-if-not-resolved=\"false\"></xref> with the specified ID, or null\nif the container does not exist.\n"
   syntax:
-    content: public TranslationMemoryContainer GetContainer(Guid id, ContainerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetContainer(Guid id)")]
+
+      public TranslationMemoryContainer GetContainer(Guid id, ContainerProperties additionalProperties)
     parameters:
     - id: id
       type: System.Guid
@@ -267,7 +381,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer
       description: The container, or null if no container with given id exists.
-    content.vb: Public Function GetContainer(id As Guid, additionalProperties As ContainerProperties) As TranslationMemoryContainer
+    content.vb: >-
+      <Obsolete("Please use GetContainer(Guid id)")>
+
+      Public Function GetContainer(id As Guid, additionalProperties As ContainerProperties) As TranslationMemoryContainer
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">id</code> is empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetContainer(Guid id)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.Guid)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.Guid)
+  id: GetContainer(System.Guid)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetContainer(Guid)
+  nameWithType: TranslationProviderServer.GetContainer(Guid)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.Guid)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the <xref href=\"Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer\" data-throw-if-not-resolved=\"false\"></xref> with the specified ID, or null\nif the container does not exist.\n"
+  syntax:
+    content: public TranslationMemoryContainer GetContainer(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+      description: The container id.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer
+      description: The container, or null if no container with given id exists.
+    content.vb: Public Function GetContainer(id As Guid) As TranslationMemoryContainer
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer*
   exceptions:
   - type: System.ArgumentNullException
@@ -325,7 +485,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the <xref href=\"Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer\" data-throw-if-not-resolved=\"false\"></xref> with the specified path, or null\nif the container does not exist.\n"
   syntax:
-    content: public TranslationMemoryContainer GetContainer(string path, ContainerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetContainer(string path)")]
+
+      public TranslationMemoryContainer GetContainer(string path, ContainerProperties additionalProperties)
     parameters:
     - id: path
       type: System.String
@@ -336,7 +499,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer
       description: 'The container, or null if no container with given path exists. '
-    content.vb: Public Function GetContainer(path As String, additionalProperties As ContainerProperties) As TranslationMemoryContainer
+    content.vb: >-
+      <Obsolete("Please use GetContainer(string path)")>
+
+      Public Function GetContainer(path As String, additionalProperties As ContainerProperties) As TranslationMemoryContainer
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">path</code> is null or empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetContainer(string path)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.String)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.String)
+  id: GetContainer(System.String)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetContainer(String)
+  nameWithType: TranslationProviderServer.GetContainer(String)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer(System.String)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the <xref href=\"Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer\" data-throw-if-not-resolved=\"false\"></xref> with the specified path, or null\nif the container does not exist.\n"
+  syntax:
+    content: public TranslationMemoryContainer GetContainer(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the container
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer
+      description: 'The container, or null if no container with given path exists. '
+    content.vb: Public Function GetContainer(path As String) As TranslationMemoryContainer
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainer*
   exceptions:
   - type: System.ArgumentNullException
@@ -481,7 +690,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the fields template with the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">id</code>, \nor null if no such fields template exists.\n"
   syntax:
-    content: public ServerBasedFieldsTemplate GetFieldsTemplate(Guid id, FieldsTemplateProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetFieldsTemplate(Guid id)")]
+
+      public ServerBasedFieldsTemplate GetFieldsTemplate(Guid id, FieldsTemplateProperties additionalProperties)
     parameters:
     - id: id
       type: System.Guid
@@ -492,7 +704,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate
       description: The fields template, or null if no fields template with given id exists.
-    content.vb: Public Function GetFieldsTemplate(id As Guid, additionalProperties As FieldsTemplateProperties) As ServerBasedFieldsTemplate
+    content.vb: >-
+      <Obsolete("Please use GetFieldsTemplate(Guid id)")>
+
+      Public Function GetFieldsTemplate(id As Guid, additionalProperties As FieldsTemplateProperties) As ServerBasedFieldsTemplate
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">id</code> is empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetFieldsTemplate(Guid id)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.Guid)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.Guid)
+  id: GetFieldsTemplate(System.Guid)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetFieldsTemplate(Guid)
+  nameWithType: TranslationProviderServer.GetFieldsTemplate(Guid)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.Guid)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the fields template with the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">id</code>, \nor null if no such fields template exists.\n"
+  syntax:
+    content: public ServerBasedFieldsTemplate GetFieldsTemplate(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+      description: The fields template ID.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate
+      description: The fields template, or null if no fields template with given id exists.
+    content.vb: Public Function GetFieldsTemplate(id As Guid) As ServerBasedFieldsTemplate
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate*
   exceptions:
   - type: System.ArgumentNullException
@@ -521,7 +779,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the fields template with the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">path</code>,\nor null if no such fields template exists.\n"
   syntax:
-    content: public ServerBasedFieldsTemplate GetFieldsTemplate(string path, FieldsTemplateProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetFieldsTemplate(string path)")]
+
+      public ServerBasedFieldsTemplate GetFieldsTemplate(string path, FieldsTemplateProperties additionalProperties)
     parameters:
     - id: path
       type: System.String
@@ -532,7 +793,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate
       description: 'The fields template, or null if no fields template with given id exists. '
-    content.vb: Public Function GetFieldsTemplate(path As String, additionalProperties As FieldsTemplateProperties) As ServerBasedFieldsTemplate
+    content.vb: >-
+      <Obsolete("Please use GetFieldsTemplate(string path)")>
+
+      Public Function GetFieldsTemplate(path As String, additionalProperties As FieldsTemplateProperties) As ServerBasedFieldsTemplate
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">path</code> is null or empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetFieldsTemplate(string path)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.String)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.String)
+  id: GetFieldsTemplate(System.String)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetFieldsTemplate(String)
+  nameWithType: TranslationProviderServer.GetFieldsTemplate(String)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate(System.String)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the fields template with the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">path</code>,\nor null if no such fields template exists.\n"
+  syntax:
+    content: public ServerBasedFieldsTemplate GetFieldsTemplate(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The fields template path.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate
+      description: 'The fields template, or null if no fields template with given id exists. '
+    content.vb: Public Function GetFieldsTemplate(path As String) As ServerBasedFieldsTemplate
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplate*
   exceptions:
   - type: System.ArgumentNullException
@@ -561,7 +868,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the LanguageResourcesTemplate with the specified ID.\n"
   syntax:
-    content: public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(Guid id, LanguageResourcesTemplateProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetLanguageResourcesTemplate(Guid id)")]
+
+      public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(Guid id, LanguageResourcesTemplateProperties additionalProperties)
     parameters:
     - id: id
       type: System.Guid
@@ -572,7 +882,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate
       description: The language resource group template, or <code>null</code> if it does not exist.
-    content.vb: Public Function GetLanguageResourcesTemplate(id As Guid, additionalProperties As LanguageResourcesTemplateProperties) As ServerBasedLanguageResourcesTemplate
+    content.vb: >-
+      <Obsolete("Please use GetLanguageResourcesTemplate(Guid id)")>
+
+      Public Function GetLanguageResourcesTemplate(id As Guid, additionalProperties As LanguageResourcesTemplateProperties) As ServerBasedLanguageResourcesTemplate
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">id</code> is empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetLanguageResourcesTemplate(Guid id)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.Guid)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.Guid)
+  id: GetLanguageResourcesTemplate(System.Guid)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetLanguageResourcesTemplate(Guid)
+  nameWithType: TranslationProviderServer.GetLanguageResourcesTemplate(Guid)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.Guid)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the LanguageResourcesTemplate with the specified ID.\n"
+  syntax:
+    content: public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+      description: The language resources template ID.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate
+      description: The language resource group template, or <code>null</code> if it does not exist.
+    content.vb: Public Function GetLanguageResourcesTemplate(id As Guid) As ServerBasedLanguageResourcesTemplate
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate*
   exceptions:
   - type: System.ArgumentNullException
@@ -601,7 +957,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the language resources template with the specified path.\n"
   syntax:
-    content: public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(string path, LanguageResourcesTemplateProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetLanguageResourcesTemplate(string path)")]
+
+      public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(string path, LanguageResourcesTemplateProperties additionalProperties)
     parameters:
     - id: path
       type: System.String
@@ -612,7 +971,53 @@ items:
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate
       description: 'The language resource group template, or <code>null</code> if it does not exist. '
-    content.vb: Public Function GetLanguageResourcesTemplate(path As String, additionalProperties As LanguageResourcesTemplateProperties) As ServerBasedLanguageResourcesTemplate
+    content.vb: >-
+      <Obsolete("Please use GetLanguageResourcesTemplate(string path)")>
+
+      Public Function GetLanguageResourcesTemplate(path As String, additionalProperties As LanguageResourcesTemplateProperties) As ServerBasedLanguageResourcesTemplate
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code data-dev-comment-type="paramref" class="paramref">path</code> is null or empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetLanguageResourcesTemplate(string path)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.String)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.String)
+  id: GetLanguageResourcesTemplate(System.String)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetLanguageResourcesTemplate(String)
+  nameWithType: TranslationProviderServer.GetLanguageResourcesTemplate(String)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate(System.String)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the language resources template with the specified path.\n"
+  syntax:
+    content: public ServerBasedLanguageResourcesTemplate GetLanguageResourcesTemplate(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The language resources template path.
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate
+      description: 'The language resource group template, or <code>null</code> if it does not exist. '
+    content.vb: Public Function GetLanguageResourcesTemplate(path As String) As ServerBasedLanguageResourcesTemplate
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplate*
   exceptions:
   - type: System.ArgumentNullException
@@ -641,7 +1046,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets default language resources for the specified language from the server.\n"
   syntax:
-    content: public LanguageResourceBundle GetDefaultLanguageResources(CultureInfo language)
+    content: >-
+      [Obsolete]
+
+      public LanguageResourceBundle GetDefaultLanguageResources(CultureInfo language)
     parameters:
     - id: language
       type: System.Globalization.CultureInfo
@@ -652,12 +1060,19 @@ items:
         A <xref href="Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourceBundle" data-throw-if-not-resolved="false"></xref> instance, populated with the default language resources. Note that
 
         some default language resources might be null.
-    content.vb: Public Function GetDefaultLanguageResources(language As CultureInfo) As LanguageResourceBundle
+    content.vb: >-
+      <Obsolete>
+
+      Public Function GetDefaultLanguageResources(language As CultureInfo) As LanguageResourceBundle
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDefaultLanguageResources*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: Thrown when <code data-dev-comment-type="paramref" class="paramref">language</code> is null.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -681,7 +1096,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets default language resources for the specified language code from the server.\n"
   syntax:
-    content: public LanguageResourceBundle GetDefaultLanguageResources(string languageCode)
+    content: >-
+      [Obsolete]
+
+      public LanguageResourceBundle GetDefaultLanguageResources(string languageCode)
     parameters:
     - id: languageCode
       type: System.String
@@ -692,12 +1110,19 @@ items:
         A <xref href="Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourceBundle" data-throw-if-not-resolved="false"></xref> instance, populated with the default language resources. Note that
 
         some default language resources might be null.
-    content.vb: Public Function GetDefaultLanguageResources(languageCode As String) As LanguageResourceBundle
+    content.vb: >-
+      <Obsolete>
+
+      Public Function GetDefaultLanguageResources(languageCode As String) As LanguageResourceBundle
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDefaultLanguageResources*
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
     description: Thrown when <code data-dev-comment-type="paramref" class="paramref">languageCode</code> is null or empty.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -721,11 +1146,21 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets all the available filters to be queried for translation memories.\n"
   syntax:
-    content: public TranslationMemoryQueryFilters GetTranslationMemoriesQueryFilters()
+    content: >-
+      [Obsolete]
+
+      public TranslationMemoryQueryFilters GetTranslationMemoriesQueryFilters()
     return:
       type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryQueryFilters
-    content.vb: Public Function GetTranslationMemoriesQueryFilters As TranslationMemoryQueryFilters
+    content.vb: >-
+      <Obsolete>
+
+      Public Function GetTranslationMemoriesQueryFilters As TranslationMemoryQueryFilters
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemoriesQueryFilters*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -781,7 +1216,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nReturns a collection of all the server-based translation memories on this server.\n"
   syntax:
-    content: public ReadOnlyCollection<ServerBasedTranslationMemory> GetTranslationMemories(TranslationMemoryProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetTranslationMemories()")]
+
+      public ReadOnlyCollection<ServerBasedTranslationMemory> GetTranslationMemories(TranslationMemoryProperties additionalProperties)
     parameters:
     - id: additionalProperties
       type: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryProperties
@@ -789,7 +1227,45 @@ items:
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedTranslationMemory}
       description: A read-only collection of server-based translation memories.
-    content.vb: Public Function GetTranslationMemories(additionalProperties As TranslationMemoryProperties) As ReadOnlyCollection(Of ServerBasedTranslationMemory)
+    content.vb: >-
+      <Obsolete("Please use GetTranslationMemories()")>
+
+      Public Function GetTranslationMemories(additionalProperties As TranslationMemoryProperties) As ReadOnlyCollection(Of ServerBasedTranslationMemory)
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetTranslationMemories()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories
+  id: GetTranslationMemories
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetTranslationMemories()
+  nameWithType: TranslationProviderServer.GetTranslationMemories()
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories()
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nReturns a collection of all the server-based translation memories on this server.\n"
+  syntax:
+    content: public ReadOnlyCollection<ServerBasedTranslationMemory> GetTranslationMemories()
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedTranslationMemory}
+      description: A read-only collection of server-based translation memories.
+    content.vb: Public Function GetTranslationMemories As ReadOnlyCollection(Of ServerBasedTranslationMemory)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetTranslationMemories*
   modifiers.csharp:
   - public
@@ -814,7 +1290,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets the database servers registered with this server for use as translation memory container hosts.\n"
   syntax:
-    content: public ReadOnlyCollection<DatabaseServer> GetDatabaseServers(DatabaseServerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use  GetDatabaseServers()")]
+
+      public ReadOnlyCollection<DatabaseServer> GetDatabaseServers(DatabaseServerProperties additionalProperties)
     parameters:
     - id: additionalProperties
       type: Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServerProperties
@@ -822,7 +1301,45 @@ items:
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer}
       description: A read-only collection of database servers registered with this server.
-    content.vb: Public Function GetDatabaseServers(additionalProperties As DatabaseServerProperties) As ReadOnlyCollection(Of DatabaseServer)
+    content.vb: >-
+      <Obsolete("Please use  GetDatabaseServers()")>
+
+      Public Function GetDatabaseServers(additionalProperties As DatabaseServerProperties) As ReadOnlyCollection(Of DatabaseServer)
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use  GetDatabaseServers()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers
+  id: GetDatabaseServers
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetDatabaseServers()
+  nameWithType: TranslationProviderServer.GetDatabaseServers()
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers()
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets the database servers registered with this server for use as translation memory container hosts.\n"
+  syntax:
+    content: public ReadOnlyCollection<DatabaseServer> GetDatabaseServers()
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.DatabaseServer}
+      description: A read-only collection of database servers registered with this server.
+    content.vb: Public Function GetDatabaseServers As ReadOnlyCollection(Of DatabaseServer)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetDatabaseServers*
   modifiers.csharp:
   - public
@@ -847,7 +1364,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets all translation memory containers managed by this translation provider server.\n"
   syntax:
-    content: public ReadOnlyCollection<TranslationMemoryContainer> GetContainers(ContainerProperties additionalProperties)
+    content: >-
+      [Obsolete("Please use GetContainers()")]
+
+      public ReadOnlyCollection<TranslationMemoryContainer> GetContainers(ContainerProperties additionalProperties)
     parameters:
     - id: additionalProperties
       type: Sdl.LanguagePlatform.TranslationMemoryApi.ContainerProperties
@@ -855,7 +1375,45 @@ items:
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer}
       description: A read-only collection of translation memory containers.
-    content.vb: Public Function GetContainers(additionalProperties As ContainerProperties) As ReadOnlyCollection(Of TranslationMemoryContainer)
+    content.vb: >-
+      <Obsolete("Please use GetContainers()")>
+
+      Public Function GetContainers(additionalProperties As ContainerProperties) As ReadOnlyCollection(Of TranslationMemoryContainer)
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetContainers()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers
+  id: GetContainers
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetContainers()
+  nameWithType: TranslationProviderServer.GetContainers()
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers()
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets all translation memory containers managed by this translation provider server.\n"
+  syntax:
+    content: public ReadOnlyCollection<TranslationMemoryContainer> GetContainers()
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.TranslationMemoryContainer}
+      description: A read-only collection of translation memory containers.
+    content.vb: Public Function GetContainers As ReadOnlyCollection(Of TranslationMemoryContainer)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetContainers*
   modifiers.csharp:
   - public
@@ -880,7 +1438,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets all the fields templates available on this server.\n"
   syntax:
-    content: public ReadOnlyCollection<ServerBasedFieldsTemplate> GetFieldsTemplates(FieldsTemplateProperties additionalProperties, bool includeTmSpecific = true)
+    content: >-
+      [Obsolete("Please use GetFieldsTemplates(bool includeTmSpecific = true)")]
+
+      public ReadOnlyCollection<ServerBasedFieldsTemplate> GetFieldsTemplates(FieldsTemplateProperties additionalProperties, bool includeTmSpecific = true)
     parameters:
     - id: additionalProperties
       type: Sdl.LanguagePlatform.TranslationMemoryApi.FieldsTemplateProperties
@@ -889,7 +1450,48 @@ items:
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate}
       description: A read-only collection of fields templates.
-    content.vb: Public Function GetFieldsTemplates(additionalProperties As FieldsTemplateProperties, includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedFieldsTemplate)
+    content.vb: >-
+      <Obsolete("Please use GetFieldsTemplates(bool includeTmSpecific = true)")>
+
+      Public Function GetFieldsTemplates(additionalProperties As FieldsTemplateProperties, includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedFieldsTemplate)
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetFieldsTemplates(bool includeTmSpecific = true)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates(System.Boolean)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates(System.Boolean)
+  id: GetFieldsTemplates(System.Boolean)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetFieldsTemplates(Boolean)
+  nameWithType: TranslationProviderServer.GetFieldsTemplates(Boolean)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates(System.Boolean)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets all the fields templates available on this server.\n"
+  syntax:
+    content: public ReadOnlyCollection<ServerBasedFieldsTemplate> GetFieldsTemplates(bool includeTmSpecific = true)
+    parameters:
+    - id: includeTmSpecific
+      type: System.Boolean
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedFieldsTemplate}
+      description: A read-only collection of fields templates.
+    content.vb: Public Function GetFieldsTemplates(includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedFieldsTemplate)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetFieldsTemplates*
   modifiers.csharp:
   - public
@@ -914,7 +1516,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nGets all the language resources templates available on this server.\n"
   syntax:
-    content: public ReadOnlyCollection<ServerBasedLanguageResourcesTemplate> GetLanguageResourcesTemplates(LanguageResourcesTemplateProperties additionalProperties, bool includeTmSpecific = true)
+    content: >-
+      [Obsolete("Please use GetLanguageResourcesTemplates(bool includeTmSpecific = true)")]
+
+      public ReadOnlyCollection<ServerBasedLanguageResourcesTemplate> GetLanguageResourcesTemplates(LanguageResourcesTemplateProperties additionalProperties, bool includeTmSpecific = true)
     parameters:
     - id: additionalProperties
       type: Sdl.LanguagePlatform.TranslationMemoryApi.LanguageResourcesTemplateProperties
@@ -923,7 +1528,48 @@ items:
     return:
       type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate}
       description: A read-only collection of language resources templates.
-    content.vb: Public Function GetLanguageResourcesTemplates(additionalProperties As LanguageResourcesTemplateProperties, includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedLanguageResourcesTemplate)
+    content.vb: >-
+      <Obsolete("Please use GetLanguageResourcesTemplates(bool includeTmSpecific = true)")>
+
+      Public Function GetLanguageResourcesTemplates(additionalProperties As LanguageResourcesTemplateProperties, includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedLanguageResourcesTemplate)
+  overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Please use GetLanguageResourcesTemplates(bool includeTmSpecific = true)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates(System.Boolean)
+  commentId: M:Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates(System.Boolean)
+  id: GetLanguageResourcesTemplates(System.Boolean)
+  parent: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer
+  langs:
+  - csharp
+  - vb
+  name: GetLanguageResourcesTemplates(Boolean)
+  nameWithType: TranslationProviderServer.GetLanguageResourcesTemplates(Boolean)
+  fullName: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates(System.Boolean)
+  type: Method
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemoryApi
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemoryApi
+  namespace: Sdl.LanguagePlatform.TranslationMemoryApi
+  summary: "\nGets all the language resources templates available on this server.\n"
+  syntax:
+    content: public ReadOnlyCollection<ServerBasedLanguageResourcesTemplate> GetLanguageResourcesTemplates(bool includeTmSpecific = true)
+    parameters:
+    - id: includeTmSpecific
+      type: System.Boolean
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemoryApi.ServerBasedLanguageResourcesTemplate}
+      description: A read-only collection of language resources templates.
+    content.vb: Public Function GetLanguageResourcesTemplates(includeTmSpecific As Boolean = True) As ReadOnlyCollection(Of ServerBasedLanguageResourcesTemplate)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.GetLanguageResourcesTemplates*
   modifiers.csharp:
   - public
@@ -1010,13 +1656,23 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nDeletes a background task.\n"
   syntax:
-    content: public void DeleteBackgroundTask(Guid taskId)
+    content: >-
+      [Obsolete]
+
+      public void DeleteBackgroundTask(Guid taskId)
     parameters:
     - id: taskId
       type: System.Guid
       description: The unique identifier for the task to be deleted.
-    content.vb: Public Sub DeleteBackgroundTask(taskId As Guid)
+    content.vb: >-
+      <Obsolete>
+
+      Public Sub DeleteBackgroundTask(taskId As Guid)
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.DeleteBackgroundTask*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1040,13 +1696,23 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemoryApi
   summary: "\nDeletes a collection background tasks.\n"
   syntax:
-    content: public void DeleteBackgroundTasks(ICollection<Guid> tasksIdentities)
+    content: >-
+      [Obsolete]
+
+      public void DeleteBackgroundTasks(ICollection<Guid> tasksIdentities)
     parameters:
     - id: tasksIdentities
       type: System.Collections.Generic.ICollection{System.Guid}
       description: The unique identifiers for the tasks to be deleted.
-    content.vb: Public Sub DeleteBackgroundTasks(tasksIdentities As ICollection(Of Guid))
+    content.vb: >-
+      <Obsolete>
+
+      Public Sub DeleteBackgroundTasks(tasksIdentities As ICollection(Of Guid))
   overload: Sdl.LanguagePlatform.TranslationMemoryApi.TranslationProviderServer.DeleteBackgroundTasks*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor
+    arguments: []
   nameWithType.vb: TranslationProviderServer.DeleteBackgroundTasks(ICollection(Of Guid))
   modifiers.csharp:
   - public

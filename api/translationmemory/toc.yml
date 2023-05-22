@@ -132,8 +132,12 @@
     name: Exporter
   - uid: Sdl.Core.TM.ImportExport.IExportOrigin
     name: IExportOrigin
+  - uid: Sdl.Core.TM.ImportExport.IExportOriginAsync
+    name: IExportOriginAsync
   - uid: Sdl.Core.TM.ImportExport.IImportDestination
     name: IImportDestination
+  - uid: Sdl.Core.TM.ImportExport.IImportDestinationAsync
+    name: IImportDestinationAsync
   - uid: Sdl.Core.TM.ImportExport.Importer
     name: Importer
   - uid: Sdl.Core.TM.ImportExport.Importer.ImportResultsMap
