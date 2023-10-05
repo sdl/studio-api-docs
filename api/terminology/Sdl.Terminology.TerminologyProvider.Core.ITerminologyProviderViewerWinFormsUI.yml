@@ -5,13 +5,13 @@ items:
   id: ITerminologyProviderViewerWinFormsUI
   parent: Sdl.Terminology.TerminologyProvider.Core
   children:
-  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry,System.String,System.String)
+  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry,System.String,System.String)
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm(System.String,System.String)
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Control
-  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Initialize(Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider,System.Globalization.CultureInfo,System.Globalization.CultureInfo)
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Initialized
-  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Release
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.SelectedTerm
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.SelectedTermChanged
@@ -69,16 +69,16 @@ items:
       description: True if this component supports the specified terminology provider URI.
     content.vb: Function SupportsTerminologyProviderUri(terminologyProviderUri As Uri) As Boolean
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.SupportsTerminologyProviderUri*
-- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
-  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
-  id: JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
+  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
+  id: JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   parent: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
   langs:
   - csharp
   - vb
-  name: JumpToTerm(IEntry)
-  nameWithType: ITerminologyProviderViewerWinFormsUI.JumpToTerm(IEntry)
-  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+  name: JumpToTerm(Entry)
+  nameWithType: ITerminologyProviderViewerWinFormsUI.JumpToTerm(Entry)
+  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   type: Method
   source:
     path: Sdl.Terminology.TerminologyProvider.Core
@@ -88,12 +88,12 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nThe user requested to see more information about an entry. Usually triggered by the &quot;View term details&quot; action in the Term Recognition window from the Editor View.\n"
   syntax:
-    content: void JumpToTerm(IEntry entry)
+    content: void JumpToTerm(Entry entry)
     parameters:
     - id: entry
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
       description: The entry which should be displayed in the Termbase Viewer window
-    content.vb: Sub JumpToTerm(entry As IEntry)
+    content.vb: Sub JumpToTerm(entry As Entry)
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm*
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm(System.String,System.String)
   commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm(System.String,System.String)
@@ -124,16 +124,16 @@ items:
       description: The text for the target term.
     content.vb: Sub AddTerm(source As String, target As String)
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm*
-- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
-  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
-  id: EditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
+  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
+  id: EditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   parent: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
   langs:
   - csharp
   - vb
-  name: EditTerm(IEntry)
-  nameWithType: ITerminologyProviderViewerWinFormsUI.EditTerm(IEntry)
-  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry)
+  name: EditTerm(Entry)
+  nameWithType: ITerminologyProviderViewerWinFormsUI.EditTerm(Entry)
+  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry)
   type: Method
   source:
     path: Sdl.Terminology.TerminologyProvider.Core
@@ -143,23 +143,23 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nThe user triggered an editing on the specified term.\n"
   syntax:
-    content: void EditTerm(IEntry term)
+    content: void EditTerm(Entry term)
     parameters:
     - id: term
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
       description: The term to edit.
-    content.vb: Sub EditTerm(term As IEntry)
+    content.vb: Sub EditTerm(term As Entry)
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.EditTerm*
-- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry,System.String,System.String)
-  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry,System.String,System.String)
-  id: AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry,System.String,System.String)
+- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry,System.String,System.String)
+  commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry,System.String,System.String)
+  id: AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry,System.String,System.String)
   parent: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
   langs:
   - csharp
   - vb
-  name: AddAndEditTerm(IEntry, String, String)
-  nameWithType: ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(IEntry, String, String)
-  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.IEntry, System.String, System.String)
+  name: AddAndEditTerm(Entry, String, String)
+  nameWithType: ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Entry, String, String)
+  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm(Sdl.Terminology.TerminologyProvider.Core.Entry, System.String, System.String)
   type: Method
   source:
     path: Sdl.Terminology.TerminologyProvider.Core
@@ -169,10 +169,10 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nThe user triggered an add on an already existing term.\n"
   syntax:
-    content: void AddAndEditTerm(IEntry term, string source, string target)
+    content: void AddAndEditTerm(Entry term, string source, string target)
     parameters:
     - id: term
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
       description: The term with the same source that already exists.
     - id: source
       type: System.String
@@ -180,7 +180,7 @@ items:
     - id: target
       type: System.String
       description: The text for the target.
-    content.vb: Sub AddAndEditTerm(term As IEntry, source As String, target As String)
+    content.vb: Sub AddAndEditTerm(term As Entry, source As String, target As String)
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddAndEditTerm*
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Initialize(Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider,System.Globalization.CultureInfo,System.Globalization.CultureInfo)
   commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.Initialize(Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider,System.Globalization.CultureInfo,System.Globalization.CultureInfo)
@@ -313,11 +313,11 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nGets or sets the term that is currently active in the Termbase Viewer window\n"
   syntax:
-    content: IEntry SelectedTerm { get; set; }
+    content: Entry SelectedTerm { get; set; }
     parameters: []
     return:
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
-    content.vb: Property SelectedTerm As IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
+    content.vb: Property SelectedTerm As Entry
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.SelectedTerm*
   modifiers.csharp:
   - get
@@ -405,13 +405,13 @@ references:
   name: JumpToTerm
   nameWithType: ITerminologyProviderViewerWinFormsUI.JumpToTerm
   fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.JumpToTerm
-- uid: Sdl.Terminology.TerminologyProvider.Core.IEntry
-  commentId: T:Sdl.Terminology.TerminologyProvider.Core.IEntry
+- uid: Sdl.Terminology.TerminologyProvider.Core.Entry
+  commentId: T:Sdl.Terminology.TerminologyProvider.Core.Entry
   parent: Sdl.Terminology.TerminologyProvider.Core
   isExternal: true
-  name: IEntry
-  nameWithType: IEntry
-  fullName: Sdl.Terminology.TerminologyProvider.Core.IEntry
+  name: Entry
+  nameWithType: Entry
+  fullName: Sdl.Terminology.TerminologyProvider.Core.Entry
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm*
   commentId: Overload:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI.AddTerm
   isExternal: true

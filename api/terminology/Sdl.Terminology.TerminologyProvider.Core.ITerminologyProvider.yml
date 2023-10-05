@@ -116,15 +116,15 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nGet an entry definition from the terminology provider\n"
   syntax:
-    content: IEntry GetEntry(int id)
+    content: Entry GetEntry(int id)
     parameters:
     - id: id
       type: System.Int32
       description: The entry id to get.
     return:
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
       description: The entry object. Returns null if an entry with the specified id does not exists in the terminology provider.
-    content.vb: Function GetEntry(id As Integer) As IEntry
+    content.vb: Function GetEntry(id As Integer) As Entry
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.GetEntry*
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.GetEntry(System.Int32,System.Collections.Generic.IEnumerable{Sdl.Terminology.TerminologyProvider.Core.ILanguage})
   commentId: M:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.GetEntry(System.Int32,System.Collections.Generic.IEnumerable{Sdl.Terminology.TerminologyProvider.Core.ILanguage})
@@ -145,7 +145,7 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nGet an entry from the terminology provider\n"
   syntax:
-    content: IEntry GetEntry(int id, IEnumerable<ILanguage> languages)
+    content: Entry GetEntry(int id, IEnumerable<ILanguage> languages)
     parameters:
     - id: id
       type: System.Int32
@@ -154,9 +154,9 @@ items:
       type: System.Collections.Generic.IEnumerable{Sdl.Terminology.TerminologyProvider.Core.ILanguage}
       description: The languages to fill for the requested entry.
     return:
-      type: Sdl.Terminology.TerminologyProvider.Core.IEntry
+      type: Sdl.Terminology.TerminologyProvider.Core.Entry
       description: The entry object. Returns null if an entry with the specified id does not exists in the terminology provider.
-    content.vb: Function GetEntry(id As Integer, languages As IEnumerable(Of ILanguage)) As IEntry
+    content.vb: Function GetEntry(id As Integer, languages As IEnumerable(Of ILanguage)) As Entry
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.GetEntry*
   nameWithType.vb: ITerminologyProvider.GetEntry(Int32, IEnumerable(Of ILanguage))
   fullName.vb: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.GetEntry(System.Int32, System.Collections.Generic.IEnumerable(Of Sdl.Terminology.TerminologyProvider.Core.ILanguage))
@@ -180,7 +180,7 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nPerforms a search over the current terminology provider\n"
   syntax:
-    content: IList<ISearchResult> Search(string text, ILanguage source, ILanguage destination, int maxResultsCount, SearchMode mode, bool targetRequired)
+    content: IList<SearchResult> Search(string text, ILanguage source, ILanguage destination, int maxResultsCount, SearchMode mode, bool targetRequired)
     parameters:
     - id: text
       type: System.String
@@ -201,9 +201,9 @@ items:
       type: System.Boolean
       description: True to return only term with target language term definition
     return:
-      type: System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.ISearchResult}
+      type: System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.SearchResult}
       description: The list of found terms
-    content.vb: Function Search(text As String, source As ILanguage, destination As ILanguage, maxResultsCount As Integer, mode As SearchMode, targetRequired As Boolean) As IList(Of ISearchResult)
+    content.vb: Function Search(text As String, source As ILanguage, destination As ILanguage, maxResultsCount As Integer, mode As SearchMode, targetRequired As Boolean) As IList(Of SearchResult)
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.Search*
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.Name
   commentId: P:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.Name
@@ -425,13 +425,13 @@ items:
   assemblies:
   - Sdl.Terminology.TerminologyProvider.Core
   namespace: Sdl.Terminology.TerminologyProvider.Core
-  summary: "\nGet a list of terminology provider definition objects\n"
+  summary: "\nGet the terminology provider&apos;s definition\n"
   syntax:
-    content: IDefinition Definition { get; }
+    content: Definition Definition { get; }
     parameters: []
     return:
-      type: Sdl.Terminology.TerminologyProvider.Core.IDefinition
-    content.vb: ReadOnly Property Definition As IDefinition
+      type: Sdl.Terminology.TerminologyProvider.Core.Definition
+    content.vb: ReadOnly Property Definition As Definition
   overload: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.Definition*
   modifiers.csharp:
   - get
@@ -609,13 +609,13 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Sdl.Terminology.TerminologyProvider.Core.IEntry
-  commentId: T:Sdl.Terminology.TerminologyProvider.Core.IEntry
+- uid: Sdl.Terminology.TerminologyProvider.Core.Entry
+  commentId: T:Sdl.Terminology.TerminologyProvider.Core.Entry
   parent: Sdl.Terminology.TerminologyProvider.Core
   isExternal: true
-  name: IEntry
-  nameWithType: IEntry
-  fullName: Sdl.Terminology.TerminologyProvider.Core.IEntry
+  name: Entry
+  nameWithType: Entry
+  fullName: Sdl.Terminology.TerminologyProvider.Core.Entry
 - uid: System.Collections.Generic.IEnumerable{Sdl.Terminology.TerminologyProvider.Core.ILanguage}
   commentId: T:System.Collections.Generic.IEnumerable{Sdl.Terminology.TerminologyProvider.Core.ILanguage}
   parent: System.Collections.Generic
@@ -726,16 +726,16 @@ references:
   name: SearchMode
   nameWithType: SearchMode
   fullName: Sdl.Terminology.TerminologyProvider.Core.SearchMode
-- uid: System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.ISearchResult}
-  commentId: T:System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.ISearchResult}
+- uid: System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.SearchResult}
+  commentId: T:System.Collections.Generic.IList{Sdl.Terminology.TerminologyProvider.Core.SearchResult}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IList`1
-  name: IList<ISearchResult>
-  nameWithType: IList<ISearchResult>
-  fullName: System.Collections.Generic.IList<Sdl.Terminology.TerminologyProvider.Core.ISearchResult>
-  nameWithType.vb: IList(Of ISearchResult)
-  fullName.vb: System.Collections.Generic.IList(Of Sdl.Terminology.TerminologyProvider.Core.ISearchResult)
-  name.vb: IList(Of ISearchResult)
+  name: IList<SearchResult>
+  nameWithType: IList<SearchResult>
+  fullName: System.Collections.Generic.IList<Sdl.Terminology.TerminologyProvider.Core.SearchResult>
+  nameWithType.vb: IList(Of SearchResult)
+  fullName.vb: System.Collections.Generic.IList(Of Sdl.Terminology.TerminologyProvider.Core.SearchResult)
+  name.vb: IList(Of SearchResult)
   spec.csharp:
   - uid: System.Collections.Generic.IList`1
     name: IList
@@ -745,10 +745,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Sdl.Terminology.TerminologyProvider.Core.ISearchResult
-    name: ISearchResult
-    nameWithType: ISearchResult
-    fullName: Sdl.Terminology.TerminologyProvider.Core.ISearchResult
+  - uid: Sdl.Terminology.TerminologyProvider.Core.SearchResult
+    name: SearchResult
+    nameWithType: SearchResult
+    fullName: Sdl.Terminology.TerminologyProvider.Core.SearchResult
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -762,10 +762,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Sdl.Terminology.TerminologyProvider.Core.ISearchResult
-    name: ISearchResult
-    nameWithType: ISearchResult
-    fullName: Sdl.Terminology.TerminologyProvider.Core.ISearchResult
+  - uid: Sdl.Terminology.TerminologyProvider.Core.SearchResult
+    name: SearchResult
+    nameWithType: SearchResult
+    fullName: Sdl.Terminology.TerminologyProvider.Core.SearchResult
     isExternal: true
   - name: )
     nameWithType: )
@@ -830,10 +830,10 @@ references:
   name: Definition
   nameWithType: ITerminologyProvider.Definition
   fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProvider.Definition
-- uid: Sdl.Terminology.TerminologyProvider.Core.IDefinition
-  commentId: T:Sdl.Terminology.TerminologyProvider.Core.IDefinition
+- uid: Sdl.Terminology.TerminologyProvider.Core.Definition
+  commentId: T:Sdl.Terminology.TerminologyProvider.Core.Definition
   parent: Sdl.Terminology.TerminologyProvider.Core
   isExternal: true
-  name: IDefinition
-  nameWithType: IDefinition
-  fullName: Sdl.Terminology.TerminologyProvider.Core.IDefinition
+  name: Definition
+  nameWithType: Definition
+  fullName: Sdl.Terminology.TerminologyProvider.Core.Definition

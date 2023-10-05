@@ -66,11 +66,11 @@ items:
   namespace: Sdl.Terminology.TerminologyProvider.Core
   summary: "\nProvides information on the current status of the terminology provider\n"
   syntax:
-    content: ITerminologyProviderStatus Status { get; }
+    content: TerminologyProviderStatus Status { get; }
     parameters: []
     return:
-      type: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderStatus
-    content.vb: ReadOnly Property Status As ITerminologyProviderStatus
+      type: Sdl.Terminology.TerminologyProvider.Core.TerminologyProviderStatus
+    content.vb: ReadOnly Property Status As TerminologyProviderStatus
   overload: Sdl.Terminology.TerminologyProvider.Core.IConnectionAwareTerminologyProvider.Status*
   modifiers.csharp:
   - get
@@ -512,10 +512,10 @@ references:
   name: Status
   nameWithType: IConnectionAwareTerminologyProvider.Status
   fullName: Sdl.Terminology.TerminologyProvider.Core.IConnectionAwareTerminologyProvider.Status
-- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderStatus
-  commentId: T:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderStatus
+- uid: Sdl.Terminology.TerminologyProvider.Core.TerminologyProviderStatus
+  commentId: T:Sdl.Terminology.TerminologyProvider.Core.TerminologyProviderStatus
   parent: Sdl.Terminology.TerminologyProvider.Core
   isExternal: true
-  name: ITerminologyProviderStatus
-  nameWithType: ITerminologyProviderStatus
-  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderStatus
+  name: TerminologyProviderStatus
+  nameWithType: TerminologyProviderStatus
+  fullName: Sdl.Terminology.TerminologyProvider.Core.TerminologyProviderStatus
