@@ -102,6 +102,8 @@
     name: TrainedTranslationModelId
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModel
     name: TranslationModel
+  - uid: Sdl.Core.FineGrainedAlignment.TranslationModelBuilderSettings
+    name: TranslationModelBuilderSettings
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelCancelException
     name: TranslationModelCancelException
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelDetails
@@ -112,20 +114,25 @@
     name: TranslationModelFitness
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelId
     name: TranslationModelId
-  - uid: Sdl.Core.FineGrainedAlignment.TranslationModelMatrixEntry
-    name: TranslationModelMatrixEntry
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelProgressEventArgs
     name: TranslationModelProgressEventArgs
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelProgressStage
     name: TranslationModelProgressStage
   - uid: Sdl.Core.FineGrainedAlignment.TranslationModelTypes
     name: TranslationModelTypes
-  - uid: Sdl.Core.FineGrainedAlignment.TranslationModelVocabEntry
-    name: TranslationModelVocabEntry
   - uid: Sdl.Core.FineGrainedAlignment.VocabularyFile3
     name: VocabularyFile3
   - uid: Sdl.Core.FineGrainedAlignment.WordAlignmentComputer3
     name: WordAlignmentComputer3
+- uid: Sdl.Core.FineGrainedAlignment.Model
+  name: Sdl.Core.FineGrainedAlignment.Model
+  items:
+  - uid: Sdl.Core.FineGrainedAlignment.Model.TranslationModelMatrixEntry
+    name: TranslationModelMatrixEntry
+  - uid: Sdl.Core.FineGrainedAlignment.Model.TranslationModelTuMatrixRequest
+    name: TranslationModelTuMatrixRequest
+  - uid: Sdl.Core.FineGrainedAlignment.Model.TranslationModelVocabEntry
+    name: TranslationModelVocabEntry
 - uid: Sdl.Core.LanguageProcessing.Tokenization
   name: Sdl.Core.LanguageProcessing.Tokenization
   items:
@@ -463,10 +470,14 @@
     name: FuzzyIndexes
   - uid: Sdl.LanguagePlatform.TranslationMemory.FuzzyIndexTuningSettings
     name: FuzzyIndexTuningSettings
+  - uid: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+    name: IAttribute
   - uid: Sdl.LanguagePlatform.TranslationMemory.IField
     name: IField
   - uid: Sdl.LanguagePlatform.TranslationMemory.IFieldDefinitions
     name: IFieldDefinitions
+  - uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+    name: IFieldTemplate
   - uid: Sdl.LanguagePlatform.TranslationMemory.IFieldValueComparer`1
     name: IFieldValueComparer<T>
     name.vb: IFieldValueComparer(Of T)
@@ -492,6 +503,8 @@
     name: ImportStatus
   - uid: Sdl.LanguagePlatform.TranslationMemory.IntFieldValue
     name: IntFieldValue
+  - uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+    name: IPicklistItem
   - uid: Sdl.LanguagePlatform.TranslationMemory.ITypedKeyValueContainer
     name: ITypedKeyValueContainer
   - uid: Sdl.LanguagePlatform.TranslationMemory.LogManager
@@ -611,6 +624,8 @@
     name: TuLimitsValidatorSettings
   - uid: Sdl.LanguagePlatform.TranslationMemory.Utilities
     name: Utilities
+  - uid: Sdl.LanguagePlatform.TranslationMemory.WordCounter
+    name: WordCounter
   - uid: Sdl.LanguagePlatform.TranslationMemory.WordCountFlags
     name: WordCountFlags
   - uid: Sdl.LanguagePlatform.TranslationMemory.WordCounts

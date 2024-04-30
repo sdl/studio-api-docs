@@ -5,7 +5,7 @@ items:
   id: ProjectsController
   parent: Sdl.TranslationStudioAutomation.IntegrationApi
   children:
-  - Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor
+  - Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
   - Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.ActivateProject(Sdl.ProjectAutomation.Core.IProject)
   - Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.Add(System.Collections.Generic.IEnumerable{System.String})
   - Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.Add(System.String)
@@ -92,16 +92,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor
-  id: '#ctor'
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  id: '#ctor(Sdl.Desktop.Platform.IStudioWindow)'
   parent: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController
   langs:
   - csharp
   - vb
-  name: ProjectsController()
-  nameWithType: ProjectsController.ProjectsController()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.ProjectsController()
+  name: ProjectsController(IStudioWindow)
+  nameWithType: ProjectsController.ProjectsController(IStudioWindow)
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.ProjectsController(Sdl.Desktop.Platform.IStudioWindow)
   type: Constructor
   source:
     path: Sdl.TranslationStudioAutomation.IntegrationApi
@@ -110,8 +110,11 @@ items:
   - Sdl.TranslationStudioAutomation.IntegrationApi
   namespace: Sdl.TranslationStudioAutomation.IntegrationApi
   syntax:
-    content: public ProjectsController()
-    content.vb: Public Sub New
+    content: public ProjectsController(IStudioWindow studioWindow)
+    parameters:
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    content.vb: Public Sub New(studioWindow As IStudioWindow)
   overload: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.#ctor*
   modifiers.csharp:
   - public
@@ -1509,6 +1512,11 @@ references:
   name: ProjectsController
   nameWithType: ProjectsController.ProjectsController
   fullName: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.ProjectsController
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.Add*
   commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.ProjectsController.Add
   isExternal: true

@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  id: IPicklistItem
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  children:
+  - Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+  - Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+  langs:
+  - csharp
+  - vb
+  name: IPicklistItem
+  nameWithType: IPicklistItem
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  type: Interface
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nPicklistItem, V2 schema.\n"
+  syntax:
+    content: public interface IPicklistItem
+    content.vb: Public Interface IPicklistItem
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+  id: Guid
+  parent: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: IPicklistItem.Guid
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGuid\n"
+  syntax:
+    content: Guid Guid { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: ReadOnly Property Guid As Guid
+  overload: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+  id: Value
+  parent: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: IPicklistItem.Value
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets the field Value.\n"
+  syntax:
+    content: string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Value As String
+  overload: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Sdl.LanguagePlatform.TranslationMemory
+  commentId: N:Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: Sdl.LanguagePlatform.TranslationMemory
+  nameWithType: Sdl.LanguagePlatform.TranslationMemory
+  fullName: Sdl.LanguagePlatform.TranslationMemory
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+  isExternal: true
+  name: Guid
+  nameWithType: IPicklistItem.Guid
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Guid
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+  isExternal: true
+  name: Value
+  nameWithType: IPicklistItem.Value
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem.Value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

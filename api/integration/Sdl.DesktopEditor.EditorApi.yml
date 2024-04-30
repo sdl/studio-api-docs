@@ -818,7 +818,6 @@ references:
   fullName: Sdl.DesktopEditor.EditorApi.ISegmentEditControl
 - uid: Sdl.DesktopEditor.EditorApi.ISideBySideEditor
   commentId: T:Sdl.DesktopEditor.EditorApi.ISideBySideEditor
-  parent: Sdl.DesktopEditor.EditorApi
   isExternal: true
   name: ISideBySideEditor
   nameWithType: ISideBySideEditor

@@ -6,12 +6,15 @@ items:
   parent: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
   children:
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.#ctor
+  - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Command
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Dispose
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Dispose(System.Boolean)
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Icon
+  - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.IsFor
+  - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
   langs:
   - csharp
   - vb
@@ -132,6 +135,36 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
+  commentId: P:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
+  id: Id
+  parent: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: MenuControlCommandModel.Id
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
+  type: Property
+  source:
+    path: Sdl.Desktop.Platform.Controls
+    isExternal: true
+  assemblies:
+  - Sdl.Desktop.Platform.Controls
+  namespace: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
   commentId: P:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
   id: CommandName
@@ -156,6 +189,66 @@ items:
       type: System.String
     content.vb: Public Property CommandName As String
   overload: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
+  commentId: P:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
+  id: ToolTip
+  parent: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel
+  langs:
+  - csharp
+  - vb
+  name: ToolTip
+  nameWithType: MenuControlCommandModel.ToolTip
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
+  type: Property
+  source:
+    path: Sdl.Desktop.Platform.Controls
+    isExternal: true
+  assemblies:
+  - Sdl.Desktop.Platform.Controls
+  namespace: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
+  syntax:
+    content: public string ToolTip { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ToolTip As String
+  overload: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
+  commentId: P:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
+  id: AccesibilityName
+  parent: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel
+  langs:
+  - csharp
+  - vb
+  name: AccesibilityName
+  nameWithType: MenuControlCommandModel.AccesibilityName
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
+  type: Property
+  source:
+    path: Sdl.Desktop.Platform.Controls
+    isExternal: true
+  assemblies:
+  - Sdl.Desktop.Platform.Controls
+  namespace: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
+  syntax:
+    content: public string AccesibilityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccesibilityName As String
+  overload: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName*
   modifiers.csharp:
   - public
   - get
@@ -768,12 +861,12 @@ references:
   name: MenuControlCommandModel
   nameWithType: MenuControlCommandModel.MenuControlCommandModel
   fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.MenuControlCommandModel
-- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName*
-  commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id*
+  commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
   isExternal: true
-  name: CommandName
-  nameWithType: MenuControlCommandModel.CommandName
-  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
+  name: Id
+  nameWithType: MenuControlCommandModel.Id
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Id
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -781,6 +874,24 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName*
+  commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
+  isExternal: true
+  name: CommandName
+  nameWithType: MenuControlCommandModel.CommandName
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.CommandName
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip*
+  commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
+  isExternal: true
+  name: ToolTip
+  nameWithType: MenuControlCommandModel.ToolTip
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.ToolTip
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName*
+  commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
+  isExternal: true
+  name: AccesibilityName
+  nameWithType: MenuControlCommandModel.AccesibilityName
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.AccesibilityName
 - uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Icon*
   commentId: Overload:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.MenuControlCommandModel.Icon
   isExternal: true

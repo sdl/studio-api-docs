@@ -5,7 +5,7 @@ items:
   id: AbstractBindedController
   parent: Sdl.Desktop.IntegrationApi.Internal
   children:
-  - Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor
+  - Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
   - Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.Activate
   - Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.BeginInvoke(System.Delegate)
   - Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.GetContentControl
@@ -71,6 +71,34 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  commentId: M:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  id: '#ctor(Sdl.Desktop.Platform.IStudioWindow)'
+  parent: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController
+  langs:
+  - csharp
+  - vb
+  name: AbstractBindedController(IStudioWindow)
+  nameWithType: AbstractBindedController.AbstractBindedController(IStudioWindow)
+  fullName: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.AbstractBindedController(Sdl.Desktop.Platform.IStudioWindow)
+  type: Constructor
+  source:
+    path: Sdl.Desktop.IntegrationApi
+    isExternal: true
+  assemblies:
+  - Sdl.Desktop.IntegrationApi
+  namespace: Sdl.Desktop.IntegrationApi.Internal
+  syntax:
+    content: protected AbstractBindedController(IStudioWindow studioWindow)
+    parameters:
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    content.vb: Protected Sub New(studioWindow As IStudioWindow)
+  overload: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.Activate
   commentId: M:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.Activate
   id: Activate
@@ -224,31 +252,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor
-  commentId: M:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor
-  id: '#ctor'
-  parent: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController
-  langs:
-  - csharp
-  - vb
-  name: AbstractBindedController()
-  nameWithType: AbstractBindedController.AbstractBindedController()
-  fullName: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.AbstractBindedController()
-  type: Constructor
-  source:
-    path: Sdl.Desktop.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.Desktop.IntegrationApi
-  namespace: Sdl.Desktop.IntegrationApi.Internal
-  syntax:
-    content: protected AbstractBindedController()
-    content.vb: Protected Sub New
-  overload: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
 - uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.View
   commentId: P:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.View
   id: View
@@ -266,7 +269,7 @@ items:
   assemblies:
   - Sdl.Desktop.IntegrationApi
   namespace: Sdl.Desktop.IntegrationApi.Internal
-  summary: "\nTODO: Add Comment\n"
+  summary: "\nInternal view\n"
   syntax:
     content: protected IView View { get; }
     parameters: []
@@ -968,6 +971,17 @@ references:
   name: Sdl.Desktop.Platform.Controls.Controls
   nameWithType: Sdl.Desktop.Platform.Controls.Controls
   fullName: Sdl.Desktop.Platform.Controls.Controls
+- uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor*
+  commentId: Overload:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor
+  isExternal: true
+  name: AbstractBindedController
+  nameWithType: AbstractBindedController.AbstractBindedController
+  fullName: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.AbstractBindedController
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
 - uid: Sdl.Desktop.IntegrationApi.AbstractViewController.Activate
   commentId: M:Sdl.Desktop.IntegrationApi.AbstractViewController.Activate
   parent: Sdl.Desktop.IntegrationApi.AbstractViewController
@@ -1118,12 +1132,6 @@ references:
   name: IAsyncResult
   nameWithType: IAsyncResult
   fullName: System.IAsyncResult
-- uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor*
-  commentId: Overload:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.#ctor
-  isExternal: true
-  name: AbstractBindedController
-  nameWithType: AbstractBindedController.AbstractBindedController
-  fullName: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.AbstractBindedController
 - uid: Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.View*
   commentId: Overload:Sdl.Desktop.IntegrationApi.Internal.AbstractBindedController.View
   isExternal: true

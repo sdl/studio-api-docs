@@ -30,6 +30,7 @@ items:
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderManager
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderReadOnly
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
+  - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWrapper
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUI
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUIWithCreate
   - Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUIWithEdit
@@ -278,6 +279,12 @@ references:
   name: ITerminologyProviderViewerWinFormsUI
   nameWithType: ITerminologyProviderViewerWinFormsUI
   fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
+- uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWrapper
+  commentId: T:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWrapper
+  isExternal: true
+  name: ITerminologyProviderViewerWrapper
+  nameWithType: ITerminologyProviderViewerWrapper
+  fullName: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWrapper
 - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUI
   commentId: T:Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUI
   parent: Sdl.Terminology.TerminologyProvider.Core

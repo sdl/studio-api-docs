@@ -82,10 +82,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const int MajorVersion = 17
+    content: public const int MajorVersion = 18
     return:
       type: System.Int32
-    content.vb: Public Const MajorVersion As Integer = 17
+    content.vb: Public Const MajorVersion As Integer = 18
   modifiers.csharp:
   - public
   - const
@@ -138,10 +138,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string ProductHelpUrI = "https://docs.rws.com/Trados_Studio_2022"
+    content: public const string ProductHelpUrI = "https://docs.rws.com/Trados_Studio_2024"
     return:
       type: System.String
-    content.vb: Public Const ProductHelpUrI As String = "https://docs.rws.com/Trados_Studio_2022"
+    content.vb: Public Const ProductHelpUrI As String = "https://docs.rws.com/Trados_Studio_2024"
   modifiers.csharp:
   - public
   - const
@@ -166,10 +166,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string BaseProductIdentifier = "Studio17"
+    content: public const string BaseProductIdentifier = "Studio18"
     return:
       type: System.String
-    content.vb: Public Const BaseProductIdentifier As String = "Studio17"
+    content.vb: Public Const BaseProductIdentifier As String = "Studio18"
   modifiers.csharp:
   - public
   - const
@@ -194,10 +194,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string ProductIdentifier = "Studio17"
+    content: public const string ProductIdentifier = "Studio18"
     return:
       type: System.String
-    content.vb: Public Const ProductIdentifier As String = "Studio17"
+    content.vb: Public Const ProductIdentifier As String = "Studio18"
   modifiers.csharp:
   - public
   - const
@@ -222,10 +222,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string SamplesVersionId = "Samples17"
+    content: public const string SamplesVersionId = "Samples18"
     return:
       type: System.String
-    content.vb: Public Const SamplesVersionId As String = "Samples17"
+    content.vb: Public Const SamplesVersionId As String = "Samples18"
   modifiers.csharp:
   - public
   - const
@@ -278,10 +278,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string StudioDocumentsFolderName = "Studio 2022"
+    content: public const string StudioDocumentsFolderName = "Studio 2024"
     return:
       type: System.String
-    content.vb: Public Const StudioDocumentsFolderName As String = "Studio 2022"
+    content.vb: Public Const StudioDocumentsFolderName As String = "Studio 2024"
   modifiers.csharp:
   - public
   - const
@@ -306,10 +306,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string ProjectTemplatesVersionId = "ProjectTemplates17"
+    content: public const string ProjectTemplatesVersionId = "ProjectTemplates18"
     return:
       type: System.String
-    content.vb: Public Const ProjectTemplatesVersionId As String = "ProjectTemplates17"
+    content.vb: Public Const ProjectTemplatesVersionId As String = "ProjectTemplates18"
   modifiers.csharp:
   - public
   - const
@@ -334,10 +334,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string LicensingVersion = "2022"
+    content: public const string LicensingVersion = "2024"
     return:
       type: System.String
-    content.vb: Public Const LicensingVersion As String = "2022"
+    content.vb: Public Const LicensingVersion As String = "2024"
   modifiers.csharp:
   - public
   - const
@@ -362,10 +362,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string CopyrightYear = "2023"
+    content: public const string CopyrightYear = "2024"
     return:
       type: System.String
-    content.vb: Public Const CopyrightYear As String = "2023"
+    content.vb: Public Const CopyrightYear As String = "2024"
   modifiers.csharp:
   - public
   - const
@@ -390,10 +390,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string ProductYear = "2022"
+    content: public const string ProductYear = "2024"
     return:
       type: System.String
-    content.vb: Public Const ProductYear As String = "2022"
+    content.vb: Public Const ProductYear As String = "2024"
   modifiers.csharp:
   - public
   - const
@@ -502,10 +502,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string MarketingProductName = "Trados Studio 2022"
+    content: public const string MarketingProductName = "Trados Studio 2024"
     return:
       type: System.String
-    content.vb: Public Const MarketingProductName As String = "Trados Studio 2022"
+    content.vb: Public Const MarketingProductName As String = "Trados Studio 2024"
   modifiers.csharp:
   - public
   - const
@@ -558,10 +558,10 @@ items:
   - Sdl.Versioning
   namespace: Sdl.Versioning
   syntax:
-    content: public const string ServicePackTag = "SR2"
+    content: public const string ServicePackTag = ""
     return:
       type: System.String
-    content.vb: Public Const ServicePackTag As String = "SR2"
+    content.vb: Public Const ServicePackTag As String = ""
   modifiers.csharp:
   - public
   - const

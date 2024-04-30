@@ -41,6 +41,7 @@ items:
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.IsStandardFieldName(System.String)
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.IsValid
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SetValue(Sdl.LanguagePlatform.TranslationMemory.FieldValue,System.Boolean)
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SourceSegment
   - Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.StructureContexts
@@ -949,130 +950,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
-  id: DocumentProperties
-  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
-  langs:
-  - csharp
-  - vb
-  name: DocumentProperties
-  nameWithType: TranslationUnit.DocumentProperties
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
-  type: Property
-  source:
-    path: Sdl.LanguagePlatform.TranslationMemory
-    isExternal: true
-  assemblies:
-  - Sdl.LanguagePlatform.TranslationMemory
-  namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or set the document properties\n"
-  syntax:
-    content: public IDocumentProperties DocumentProperties { get; set; }
-    parameters: []
-    return:
-      type: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
-    content.vb: Public Property DocumentProperties As IDocumentProperties
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
-  id: FileProperties
-  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
-  langs:
-  - csharp
-  - vb
-  name: FileProperties
-  nameWithType: TranslationUnit.FileProperties
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
-  type: Property
-  source:
-    path: Sdl.LanguagePlatform.TranslationMemory
-    isExternal: true
-  assemblies:
-  - Sdl.LanguagePlatform.TranslationMemory
-  namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or set the file properties \n"
-  syntax:
-    content: public IFileProperties FileProperties { get; set; }
-    parameters: []
-    return:
-      type: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
-    content.vb: Public Property FileProperties As IFileProperties
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
-  id: DocumentSegmentPair
-  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
-  langs:
-  - csharp
-  - vb
-  name: DocumentSegmentPair
-  nameWithType: TranslationUnit.DocumentSegmentPair
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
-  type: Property
-  source:
-    path: Sdl.LanguagePlatform.TranslationMemory
-    isExternal: true
-  assemblies:
-  - Sdl.LanguagePlatform.TranslationMemory
-  namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the segment pair associated to this translation unit.\nThe segment pair should not be modified because the modification might change the original document.\n"
-  syntax:
-    content: public ISegmentPair DocumentSegmentPair { get; set; }
-    parameters: []
-    return:
-      type: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
-    content.vb: Public Property DocumentSegmentPair As ISegmentPair
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
-  id: FileId
-  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
-  langs:
-  - csharp
-  - vb
-  name: FileId
-  nameWithType: TranslationUnit.FileId
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
-  type: Property
-  source:
-    path: Sdl.LanguagePlatform.TranslationMemory
-    isExternal: true
-  assemblies:
-  - Sdl.LanguagePlatform.TranslationMemory
-  namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nFileId of the bcm document file that holds the segmentPair that generated this translationUnit \n"
-  syntax:
-    content: public string FileId { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property FileId As String
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SourceSegment
   commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SourceSegment
   id: SourceSegment
@@ -1129,6 +1006,192 @@ items:
       type: Sdl.LanguagePlatform.Core.Segment
     content.vb: Public Property TargetSegment As Segment
   overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.TargetSegment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  id: Origin
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: TranslationUnit.Origin
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the origin of this translation unit.\n"
+  syntax:
+    content: public TranslationUnitOrigin Origin { get; set; }
+    parameters: []
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+    content.vb: Public Property Origin As TranslationUnitOrigin
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
+  id: OriginSystem
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: OriginSystem
+  nameWithType: TranslationUnit.OriginSystem
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the origin system of this translation unit, that should be tm name for when origin is TM.\n"
+  syntax:
+    content: public string OriginSystem { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginSystem As String
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  id: ConfirmationLevel
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: ConfirmationLevel
+  nameWithType: TranslationUnit.ConfirmationLevel
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the confirmation level of this translation unit.\n"
+  syntax:
+    content: public ConfirmationLevel ConfirmationLevel { get; set; }
+    parameters: []
+    return:
+      type: Sdl.Core.Globalization.ConfirmationLevel
+    content.vb: Public Property ConfirmationLevel As ConfirmationLevel
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  id: Format
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: TranslationUnit.Format
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the format of this translation unit.\n"
+  syntax:
+    content: public TranslationUnitFormat Format { get; set; }
+    parameters: []
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+    content.vb: Public Property Format As TranslationUnitFormat
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  id: SystemFields
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: SystemFields
+  nameWithType: TranslationUnit.SystemFields
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the system fields of this translation unit.\n"
+  syntax:
+    content: public SystemFields SystemFields { get; set; }
+    parameters: []
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemory.SystemFields
+    content.vb: Public Property SystemFields As SystemFields
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
+  id: FieldValues
+  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+  langs:
+  - csharp
+  - vb
+  name: FieldValues
+  nameWithType: TranslationUnit.FieldValues
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGets or sets the user-defined field values for this translation unit.\n"
+  syntax:
+    content: public FieldValues FieldValues { get; set; }
+    parameters: []
+    return:
+      type: Sdl.LanguagePlatform.TranslationMemory.FieldValues
+    content.vb: Public Property FieldValues As FieldValues
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues*
   modifiers.csharp:
   - public
   - get
@@ -1290,16 +1353,16 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
-  id: Origin
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
+  id: DocumentProperties
   parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   langs:
   - csharp
   - vb
-  name: Origin
-  nameWithType: TranslationUnit.Origin
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  name: DocumentProperties
+  nameWithType: TranslationUnit.DocumentProperties
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
   type: Property
   source:
     path: Sdl.LanguagePlatform.TranslationMemory
@@ -1307,30 +1370,30 @@ items:
   assemblies:
   - Sdl.LanguagePlatform.TranslationMemory
   namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the origin of this translation unit.\n"
+  summary: "\nGets or set the document properties\n"
   syntax:
-    content: public TranslationUnitOrigin Origin { get; set; }
+    content: public IDocumentProperties DocumentProperties { get; set; }
     parameters: []
     return:
-      type: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-    content.vb: Public Property Origin As TranslationUnitOrigin
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin*
+      type: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
+    content.vb: Public Property DocumentProperties As IDocumentProperties
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
-  id: ConfirmationLevel
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
+  id: FileProperties
   parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   langs:
   - csharp
   - vb
-  name: ConfirmationLevel
-  nameWithType: TranslationUnit.ConfirmationLevel
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  name: FileProperties
+  nameWithType: TranslationUnit.FileProperties
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
   type: Property
   source:
     path: Sdl.LanguagePlatform.TranslationMemory
@@ -1338,30 +1401,30 @@ items:
   assemblies:
   - Sdl.LanguagePlatform.TranslationMemory
   namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the confirmation level of this translation unit.\n"
+  summary: "\nGets or set the file properties \n"
   syntax:
-    content: public ConfirmationLevel ConfirmationLevel { get; set; }
+    content: public IFileProperties FileProperties { get; set; }
     parameters: []
     return:
-      type: Sdl.Core.Globalization.ConfirmationLevel
-    content.vb: Public Property ConfirmationLevel As ConfirmationLevel
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel*
+      type: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
+    content.vb: Public Property FileProperties As IFileProperties
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
-  id: Format
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
+  id: DocumentSegmentPair
   parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   langs:
   - csharp
   - vb
-  name: Format
-  nameWithType: TranslationUnit.Format
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  name: DocumentSegmentPair
+  nameWithType: TranslationUnit.DocumentSegmentPair
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
   type: Property
   source:
     path: Sdl.LanguagePlatform.TranslationMemory
@@ -1369,30 +1432,30 @@ items:
   assemblies:
   - Sdl.LanguagePlatform.TranslationMemory
   namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the format of this translation unit.\n"
+  summary: "\nGets or sets the segment pair associated to this translation unit.\nThe segment pair should not be modified because the modification might change the original document.\n"
   syntax:
-    content: public TranslationUnitFormat Format { get; set; }
+    content: public ISegmentPair DocumentSegmentPair { get; set; }
     parameters: []
     return:
-      type: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-    content.vb: Public Property Format As TranslationUnitFormat
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format*
+      type: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
+    content.vb: Public Property DocumentSegmentPair As ISegmentPair
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
-  id: SystemFields
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
+  id: FileId
   parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   langs:
   - csharp
   - vb
-  name: SystemFields
-  nameWithType: TranslationUnit.SystemFields
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  name: FileId
+  nameWithType: TranslationUnit.FileId
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
   type: Property
   source:
     path: Sdl.LanguagePlatform.TranslationMemory
@@ -1400,45 +1463,14 @@ items:
   assemblies:
   - Sdl.LanguagePlatform.TranslationMemory
   namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the system fields of this translation unit.\n"
+  summary: "\nFileId of the bcm document file that holds the segmentPair that generated this translationUnit \n"
   syntax:
-    content: public SystemFields SystemFields { get; set; }
+    content: public string FileId { get; set; }
     parameters: []
     return:
-      type: Sdl.LanguagePlatform.TranslationMemory.SystemFields
-    content.vb: Public Property SystemFields As SystemFields
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
-  commentId: P:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
-  id: FieldValues
-  parent: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
-  langs:
-  - csharp
-  - vb
-  name: FieldValues
-  nameWithType: TranslationUnit.FieldValues
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
-  type: Property
-  source:
-    path: Sdl.LanguagePlatform.TranslationMemory
-    isExternal: true
-  assemblies:
-  - Sdl.LanguagePlatform.TranslationMemory
-  namespace: Sdl.LanguagePlatform.TranslationMemory
-  summary: "\nGets or sets the user-defined field values for this translation unit.\n"
-  syntax:
-    content: public FieldValues FieldValues { get; set; }
-    parameters: []
-    return:
-      type: Sdl.LanguagePlatform.TranslationMemory.FieldValues
-    content.vb: Public Property FieldValues As FieldValues
-  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues*
+      type: System.String
+    content.vb: Public Property FileId As String
+  overload: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId*
   modifiers.csharp:
   - public
   - get
@@ -2495,48 +2527,6 @@ references:
   name: ContainsQuickInsertId
   nameWithType: TranslationUnit.ContainsQuickInsertId
   fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ContainsQuickInsertId
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
-  isExternal: true
-  name: DocumentProperties
-  nameWithType: TranslationUnit.DocumentProperties
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
-- uid: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
-  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties'
-  isExternal: true
-  name: IDocumentProperties
-  nameWithType: IDocumentProperties
-  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
-  isExternal: true
-  name: FileProperties
-  nameWithType: TranslationUnit.FileProperties
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
-- uid: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
-  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties'
-  isExternal: true
-  name: IFileProperties
-  nameWithType: IFileProperties
-  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
-  isExternal: true
-  name: DocumentSegmentPair
-  nameWithType: TranslationUnit.DocumentSegmentPair
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
-- uid: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
-  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair'
-  isExternal: true
-  name: ISegmentPair
-  nameWithType: ISegmentPair
-  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
-  isExternal: true
-  name: FileId
-  nameWithType: TranslationUnit.FileId
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
 - uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SourceSegment*
   commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SourceSegment
   isExternal: true
@@ -2549,6 +2539,76 @@ references:
   name: TargetSegment
   nameWithType: TranslationUnit.TargetSegment
   fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.TargetSegment
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+  isExternal: true
+  name: Origin
+  nameWithType: TranslationUnit.Origin
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: TranslationUnitOrigin
+  nameWithType: TranslationUnitOrigin
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
+  isExternal: true
+  name: OriginSystem
+  nameWithType: TranslationUnit.OriginSystem
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.OriginSystem
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  isExternal: true
+  name: ConfirmationLevel
+  nameWithType: TranslationUnit.ConfirmationLevel
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+- uid: Sdl.Core.Globalization.ConfirmationLevel
+  commentId: '!:Sdl.Core.Globalization.ConfirmationLevel'
+  isExternal: true
+  name: ConfirmationLevel
+  nameWithType: ConfirmationLevel
+  fullName: Sdl.Core.Globalization.ConfirmationLevel
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  isExternal: true
+  name: Format
+  nameWithType: TranslationUnit.Format
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: TranslationUnitFormat
+  nameWithType: TranslationUnitFormat
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  isExternal: true
+  name: SystemFields
+  nameWithType: TranslationUnit.SystemFields
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+- uid: Sdl.LanguagePlatform.TranslationMemory.SystemFields
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.SystemFields
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: SystemFields
+  nameWithType: SystemFields
+  fullName: Sdl.LanguagePlatform.TranslationMemory.SystemFields
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
+  isExternal: true
+  name: FieldValues
+  nameWithType: TranslationUnit.FieldValues
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
+- uid: Sdl.LanguagePlatform.TranslationMemory.FieldValues
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.FieldValues
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: FieldValues
+  nameWithType: FieldValues
+  fullName: Sdl.LanguagePlatform.TranslationMemory.FieldValues
 - uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Contexts*
   commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Contexts
   isExternal: true
@@ -2681,70 +2741,48 @@ references:
   name: InsertDate
   nameWithType: TranslationUnit.InsertDate
   fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.InsertDate
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
   isExternal: true
-  name: Origin
-  nameWithType: TranslationUnit.Origin
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Origin
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-  parent: Sdl.LanguagePlatform.TranslationMemory
+  name: DocumentProperties
+  nameWithType: TranslationUnit.DocumentProperties
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentProperties
+- uid: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
+  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties'
   isExternal: true
-  name: TranslationUnitOrigin
-  nameWithType: TranslationUnitOrigin
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
+  name: IDocumentProperties
+  nameWithType: IDocumentProperties
+  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.IDocumentProperties
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
   isExternal: true
-  name: ConfirmationLevel
-  nameWithType: TranslationUnit.ConfirmationLevel
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.ConfirmationLevel
-- uid: Sdl.Core.Globalization.ConfirmationLevel
-  commentId: '!:Sdl.Core.Globalization.ConfirmationLevel'
+  name: FileProperties
+  nameWithType: TranslationUnit.FileProperties
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileProperties
+- uid: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
+  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties'
   isExternal: true
-  name: ConfirmationLevel
-  nameWithType: ConfirmationLevel
-  fullName: Sdl.Core.Globalization.ConfirmationLevel
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
+  name: IFileProperties
+  nameWithType: IFileProperties
+  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.IFileProperties
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
   isExternal: true
-  name: Format
-  nameWithType: TranslationUnit.Format
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.Format
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-  parent: Sdl.LanguagePlatform.TranslationMemory
+  name: DocumentSegmentPair
+  nameWithType: TranslationUnit.DocumentSegmentPair
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.DocumentSegmentPair
+- uid: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
+  commentId: '!:Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair'
   isExternal: true
-  name: TranslationUnitFormat
-  nameWithType: TranslationUnitFormat
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
+  name: ISegmentPair
+  nameWithType: ISegmentPair
+  fullName: Sdl.FileTypeSupport.Framework.BilingualApi.ISegmentPair
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
   isExternal: true
-  name: SystemFields
-  nameWithType: TranslationUnit.SystemFields
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.SystemFields
-- uid: Sdl.LanguagePlatform.TranslationMemory.SystemFields
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.SystemFields
-  parent: Sdl.LanguagePlatform.TranslationMemory
-  isExternal: true
-  name: SystemFields
-  nameWithType: SystemFields
-  fullName: Sdl.LanguagePlatform.TranslationMemory.SystemFields
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues*
-  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
-  isExternal: true
-  name: FieldValues
-  nameWithType: TranslationUnit.FieldValues
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FieldValues
-- uid: Sdl.LanguagePlatform.TranslationMemory.FieldValues
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.FieldValues
-  parent: Sdl.LanguagePlatform.TranslationMemory
-  isExternal: true
-  name: FieldValues
-  nameWithType: FieldValues
-  fullName: Sdl.LanguagePlatform.TranslationMemory.FieldValues
+  name: FileId
+  nameWithType: TranslationUnit.FileId
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.FileId
 - uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.StructureContexts*
   commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit.StructureContexts
   isExternal: true

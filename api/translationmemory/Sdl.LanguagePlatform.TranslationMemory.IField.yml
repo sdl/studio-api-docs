@@ -50,15 +50,16 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemory
   summary: "\nGets or sets the field name.\n"
   syntax:
-    content: string Name { get; set; }
+    content: string Name { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Property Name As String
+    content.vb: ReadOnly Property Name As String
   overload: Sdl.LanguagePlatform.TranslationMemory.IField.Name*
   modifiers.csharp:
   - get
-  - set
+  modifiers.vb:
+  - ReadOnly
 - uid: Sdl.LanguagePlatform.TranslationMemory.IField.ValueType
   commentId: P:Sdl.LanguagePlatform.TranslationMemory.IField.ValueType
   id: ValueType
@@ -78,15 +79,16 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemory
   summary: "\nGets or sets the field value type.\n"
   syntax:
-    content: FieldValueType ValueType { get; set; }
+    content: FieldValueType ValueType { get; }
     parameters: []
     return:
       type: Sdl.LanguagePlatform.TranslationMemory.FieldValueType
-    content.vb: Property ValueType As FieldValueType
+    content.vb: ReadOnly Property ValueType As FieldValueType
   overload: Sdl.LanguagePlatform.TranslationMemory.IField.ValueType*
   modifiers.csharp:
   - get
-  - set
+  modifiers.vb:
+  - ReadOnly
 - uid: Sdl.LanguagePlatform.TranslationMemory.IField.PicklistItemNames
   commentId: P:Sdl.LanguagePlatform.TranslationMemory.IField.PicklistItemNames
   id: PicklistItemNames

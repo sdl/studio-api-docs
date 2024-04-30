@@ -79,7 +79,7 @@ items:
   - Sdl.Desktop.IntegrationApi.Extensions
   namespace: Sdl.Desktop.IntegrationApi.Extensions
   summary: "\nDefines a 0 based index order for the UI elements where the highest value is the most important.\n"
-  remarks: "\n<p>\nThe z-Index ordering is performed only for the intergrated elements and have a lower priority than SDL ordering. It acts as importance from left to right or top to bottom.\n</p>\n<p> The highest ZIndex value is in the left or top and the lowest value is in the right or bottom. </p>        \n"
+  remarks: "\n<p>\nThe z-Index ordering is performed only for the intergrated elements and have a lower priority than RWS ordering. It acts as importance from left to right or top to bottom.\n</p>\n<p> The highest ZIndex value is in the left or top and the lowest value is in the right or bottom. </p>        \n"
   syntax:
     content: uint ZIndex { get; set; }
     parameters: []

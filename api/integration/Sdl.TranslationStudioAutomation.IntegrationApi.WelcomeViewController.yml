@@ -5,7 +5,7 @@ items:
   id: WelcomeViewController
   parent: Sdl.TranslationStudioAutomation.IntegrationApi
   children:
-  - Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor
+  - Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
   - Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   langs:
   - csharp
@@ -73,6 +73,34 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  id: '#ctor(Sdl.Desktop.Platform.IStudioWindow)'
+  parent: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController
+  langs:
+  - csharp
+  - vb
+  name: WelcomeViewController(IStudioWindow)
+  nameWithType: WelcomeViewController.WelcomeViewController(IStudioWindow)
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.WelcomeViewController(Sdl.Desktop.Platform.IStudioWindow)
+  type: Constructor
+  source:
+    path: Sdl.TranslationStudioAutomation.IntegrationApi
+    isExternal: true
+  assemblies:
+  - Sdl.TranslationStudioAutomation.IntegrationApi
+  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
+  syntax:
+    content: public WelcomeViewController(IStudioWindow studioWindow)
+    parameters:
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    content.vb: Public Sub New(studioWindow As IStudioWindow)
+  overload: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   id: Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
@@ -104,31 +132,6 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor
-  id: '#ctor'
-  parent: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController
-  langs:
-  - csharp
-  - vb
-  name: WelcomeViewController()
-  nameWithType: WelcomeViewController.WelcomeViewController()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.WelcomeViewController()
-  type: Constructor
-  source:
-    path: Sdl.TranslationStudioAutomation.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.TranslationStudioAutomation.IntegrationApi
-  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
-  syntax:
-    content: public WelcomeViewController()
-    content.vb: Public Sub New
-  overload: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 references:
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi
   commentId: N:Sdl.TranslationStudioAutomation.IntegrationApi
@@ -947,6 +950,17 @@ references:
   name: Sdl.Desktop.Platform.Controls.Controls
   nameWithType: Sdl.Desktop.Platform.Controls.Controls
   fullName: Sdl.Desktop.Platform.Controls.Controls
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor*
+  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor
+  isExternal: true
+  name: WelcomeViewController
+  nameWithType: WelcomeViewController.WelcomeViewController
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.WelcomeViewController
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
 - uid: Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   commentId: M:Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   parent: Sdl.Desktop.IntegrationApi.AbstractViewController
@@ -1001,9 +1015,3 @@ references:
   name: IViewContext
   nameWithType: IViewContext
   fullName: Sdl.Desktop.IntegrationApi.IViewContext
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor*
-  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.#ctor
-  isExternal: true
-  name: WelcomeViewController
-  nameWithType: WelcomeViewController.WelcomeViewController
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.WelcomeViewController.WelcomeViewController

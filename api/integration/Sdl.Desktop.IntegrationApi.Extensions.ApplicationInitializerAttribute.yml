@@ -20,8 +20,6 @@ items:
   - Sdl.Desktop.IntegrationApi.Extensions
   namespace: Sdl.Desktop.IntegrationApi.Extensions
   summary: "\nUsed to decorate the classes which are executed at the application startup.\nThis classes must also implement the Sdl.Desktop.IntegrationApi.IApplicationInitializer interface\n"
-  example:
-  - <a href="6bbfdddf-235e-411b-b097-adefe629ff71.htm">Application Initializer Sample</a>
   syntax:
     content: >-
       [AttributeUsage(AttributeTargets.Class)]

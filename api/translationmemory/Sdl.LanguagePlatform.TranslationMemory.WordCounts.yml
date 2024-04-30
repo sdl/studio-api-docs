@@ -207,7 +207,7 @@ items:
   summary: "\n\n"
   syntax:
     content: >-
-      [Obsolete("Use CreateWordCountsAsync")]
+      [Obsolete("Use WordCounter")]
 
       public WordCounts(IList<Token> tokens, WordCountsOptions options, CultureCode culture)
     parameters:
@@ -218,7 +218,7 @@ items:
     - id: culture
       type: Sdl.Core.Globalization.CultureCode
     content.vb: >-
-      <Obsolete("Use CreateWordCountsAsync")>
+      <Obsolete("Use WordCounter")>
 
       Public Sub New(tokens As IList(Of Token), options As WordCountsOptions, culture As CultureCode)
   overload: Sdl.LanguagePlatform.TranslationMemory.WordCounts.#ctor*
@@ -227,7 +227,7 @@ items:
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: Use CreateWordCountsAsync
+      value: Use WordCounter
   nameWithType.vb: WordCounts.WordCounts(IList(Of Token), WordCountsOptions, CultureCode)
   modifiers.csharp:
   - public
@@ -254,7 +254,10 @@ items:
   namespace: Sdl.LanguagePlatform.TranslationMemory
   summary: "\n\n"
   syntax:
-    content: public static Task<WordCounts> CreateWordCountsAsync(IList<Token> tokens, WordCountsOptions options, CultureCode cultureCode, ICultureMetadataManager cultureMetadataManager)
+    content: >-
+      [Obsolete("Use WordCounter")]
+
+      public static Task<WordCounts> CreateWordCountsAsync(IList<Token> tokens, WordCountsOptions options, CultureCode cultureCode, ICultureMetadataManager cultureMetadataManager)
     parameters:
     - id: tokens
       type: System.Collections.Generic.IList{Sdl.LanguagePlatform.Core.Tokenization.Token}
@@ -266,8 +269,17 @@ items:
       type: Sdl.Core.Globalization.CultureMetadataManager.ICultureMetadataManager
     return:
       type: System.Threading.Tasks.Task{Sdl.LanguagePlatform.TranslationMemory.WordCounts}
-    content.vb: Public Shared Function CreateWordCountsAsync(tokens As IList(Of Token), options As WordCountsOptions, cultureCode As CultureCode, cultureMetadataManager As ICultureMetadataManager) As Task(Of WordCounts)
+    content.vb: >-
+      <Obsolete("Use WordCounter")>
+
+      Public Shared Function CreateWordCountsAsync(tokens As IList(Of Token), options As WordCountsOptions, cultureCode As CultureCode, cultureMetadataManager As ICultureMetadataManager) As Task(Of WordCounts)
   overload: Sdl.LanguagePlatform.TranslationMemory.WordCounts.CreateWordCountsAsync*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use WordCounter
   nameWithType.vb: WordCounts.CreateWordCountsAsync(IList(Of Token), WordCountsOptions, CultureCode, ICultureMetadataManager)
   modifiers.csharp:
   - public

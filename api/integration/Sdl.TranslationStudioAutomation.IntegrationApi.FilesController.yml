@@ -5,14 +5,12 @@ items:
   id: FilesController
   parent: Sdl.TranslationStudioAutomation.IntegrationApi
   children:
-  - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor
+  - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor(Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider,Sdl.Desktop.Platform.IStudioWindow)
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.AddFiles
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.AreAllSelectedTaskFilesAssignedToCurrentUser
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.CurrentProject
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.CurrentSelectedLanguage
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.CurrentVisibleFiles
-  - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService
-  - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.RemoveSelectedFiles
   - Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectedFiles
@@ -86,16 +84,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor
-  id: '#ctor'
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor(Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider,Sdl.Desktop.Platform.IStudioWindow)
+  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor(Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider,Sdl.Desktop.Platform.IStudioWindow)
+  id: '#ctor(Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider,Sdl.Desktop.Platform.IStudioWindow)'
   parent: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController
   langs:
   - csharp
   - vb
-  name: FilesController()
-  nameWithType: FilesController.FilesController()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.FilesController()
+  name: FilesController(IVisibleFilesProvider, IStudioWindow)
+  nameWithType: FilesController.FilesController(IVisibleFilesProvider, IStudioWindow)
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.FilesController(Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider, Sdl.Desktop.Platform.IStudioWindow)
   type: Constructor
   source:
     path: Sdl.TranslationStudioAutomation.IntegrationApi
@@ -104,8 +102,13 @@ items:
   - Sdl.TranslationStudioAutomation.IntegrationApi
   namespace: Sdl.TranslationStudioAutomation.IntegrationApi
   syntax:
-    content: public FilesController()
-    content.vb: Public Sub New
+    content: public FilesController(IVisibleFilesProvider visibleFilesProvider, IStudioWindow studioWindow)
+    parameters:
+    - id: visibleFilesProvider
+      type: Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    content.vb: Public Sub New(visibleFilesProvider As IVisibleFilesProvider, studioWindow As IStudioWindow)
   overload: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.#ctor*
   modifiers.csharp:
   - public
@@ -231,60 +234,6 @@ items:
   - Public
   fullName.vb: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectFiles(System.Collections.Generic.IEnumerable(Of Sdl.ProjectAutomation.Core.ProjectFile))
   name.vb: SelectFiles(IEnumerable(Of ProjectFile))
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService
-  id: GetFilesViewService
-  parent: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController
-  langs:
-  - csharp
-  - vb
-  name: GetFilesViewService()
-  nameWithType: FilesController.GetFilesViewService()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService()
-  type: Method
-  source:
-    path: Sdl.TranslationStudioAutomation.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.TranslationStudioAutomation.IntegrationApi
-  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
-  syntax:
-    content: protected IFilesViewService GetFilesViewService()
-    return:
-      type: Sdl.TranslationStudio.Api.ProjectManagement.IFilesViewService
-    content.vb: Protected Function GetFilesViewService As IFilesViewService
-  overload: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService
-  id: GetProjectManagementService
-  parent: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController
-  langs:
-  - csharp
-  - vb
-  name: GetProjectManagementService()
-  nameWithType: FilesController.GetProjectManagementService()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService()
-  type: Method
-  source:
-    path: Sdl.TranslationStudioAutomation.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.TranslationStudioAutomation.IntegrationApi
-  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
-  syntax:
-    content: protected IFilesViewService GetProjectManagementService()
-    return:
-      type: Sdl.TranslationStudio.Api.ProjectManagement.IFilesViewService
-    content.vb: Protected Function GetProjectManagementService As IFilesViewService
-  overload: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectedFiles
   commentId: P:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectedFiles
   id: SelectedFiles
@@ -1321,6 +1270,17 @@ references:
   name: FilesController
   nameWithType: FilesController.FilesController
   fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.FilesController
+- uid: Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider
+  commentId: '!:Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider'
+  isExternal: true
+  name: IVisibleFilesProvider
+  nameWithType: IVisibleFilesProvider
+  fullName: Sdl.TranslationStudio.Api.ProjectManagement.IVisibleFilesProvider
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
 - uid: Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   commentId: M:Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   parent: Sdl.Desktop.IntegrationApi.AbstractViewController
@@ -1489,23 +1449,6 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService*
-  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService
-  isExternal: true
-  name: GetFilesViewService
-  nameWithType: FilesController.GetFilesViewService
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetFilesViewService
-- uid: Sdl.TranslationStudio.Api.ProjectManagement.IFilesViewService
-  isExternal: true
-  name: IFilesViewService
-  nameWithType: IFilesViewService
-  fullName: Sdl.TranslationStudio.Api.ProjectManagement.IFilesViewService
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService*
-  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService
-  isExternal: true
-  name: GetProjectManagementService
-  nameWithType: FilesController.GetProjectManagementService
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.GetProjectManagementService
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectedFiles*
   commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.FilesController.SelectedFiles
   isExternal: true

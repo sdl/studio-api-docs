@@ -5,7 +5,7 @@ items:
   id: EditorController
   parent: Sdl.TranslationStudioAutomation.IntegrationApi
   children:
-  - Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor
+  - Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor(Sdl.Desktop.Platform.IStudioWindow,Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener,Sdl.TranslationStudio.Api.Editor.IEditorService)
   - Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.Activate(Sdl.TranslationStudioAutomation.IntegrationApi.IStudioDocument)
   - Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.ActiveDocument
   - Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.ActiveDocumentChanged
@@ -96,6 +96,38 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor(Sdl.Desktop.Platform.IStudioWindow,Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener,Sdl.TranslationStudio.Api.Editor.IEditorService)
+  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor(Sdl.Desktop.Platform.IStudioWindow,Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener,Sdl.TranslationStudio.Api.Editor.IEditorService)
+  id: '#ctor(Sdl.Desktop.Platform.IStudioWindow,Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener,Sdl.TranslationStudio.Api.Editor.IEditorService)'
+  parent: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController
+  langs:
+  - csharp
+  - vb
+  name: EditorController(IStudioWindow, ITranslatableDocumentFromPathOpener, IEditorService)
+  nameWithType: EditorController.EditorController(IStudioWindow, ITranslatableDocumentFromPathOpener, IEditorService)
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.EditorController(Sdl.Desktop.Platform.IStudioWindow, Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener, Sdl.TranslationStudio.Api.Editor.IEditorService)
+  type: Constructor
+  source:
+    path: Sdl.TranslationStudioAutomation.IntegrationApi
+    isExternal: true
+  assemblies:
+  - Sdl.TranslationStudioAutomation.IntegrationApi
+  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
+  syntax:
+    content: public EditorController(IStudioWindow studioWindow, ITranslatableDocumentFromPathOpener translatableDocumentFromPathOpener, IEditorService editorService)
+    parameters:
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    - id: translatableDocumentFromPathOpener
+      type: Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener
+    - id: editorService
+      type: Sdl.TranslationStudio.Api.Editor.IEditorService
+    content.vb: Public Sub New(studioWindow As IStudioWindow, translatableDocumentFromPathOpener As ITranslatableDocumentFromPathOpener, editorService As IEditorService)
+  overload: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.Open(System.String)
   commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.Open(System.String)
   id: Open(System.String)
@@ -484,31 +516,6 @@ items:
       description: Returns an enumerable document collection of all the opened documents.
     content.vb: Public Function GetDocuments As IEnumerable(Of IStudioDocument)
   overload: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.GetDocuments*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor
-  id: '#ctor'
-  parent: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController
-  langs:
-  - csharp
-  - vb
-  name: EditorController()
-  nameWithType: EditorController.EditorController()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.EditorController()
-  type: Constructor
-  source:
-    path: Sdl.TranslationStudioAutomation.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.TranslationStudioAutomation.IntegrationApi
-  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
-  syntax:
-    content: public EditorController()
-    content.vb: Public Sub New
-  overload: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1640,6 +1647,29 @@ references:
   name: Sdl.Desktop.Platform.Controls.Controls
   nameWithType: Sdl.Desktop.Platform.Controls.Controls
   fullName: Sdl.Desktop.Platform.Controls.Controls
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor*
+  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor
+  isExternal: true
+  name: EditorController
+  nameWithType: EditorController.EditorController
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.EditorController
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
+- uid: Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener
+  commentId: '!:Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener'
+  isExternal: true
+  name: ITranslatableDocumentFromPathOpener
+  nameWithType: ITranslatableDocumentFromPathOpener
+  fullName: Sdl.TranslationStudio.Api.Editor.ITranslatableDocumentFromPathOpener
+- uid: Sdl.TranslationStudio.Api.Editor.IEditorService
+  commentId: '!:Sdl.TranslationStudio.Api.Editor.IEditorService'
+  isExternal: true
+  name: IEditorService
+  nameWithType: IEditorService
+  fullName: Sdl.TranslationStudio.Api.Editor.IEditorService
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.Open*
   commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.Open
   isExternal: true
@@ -1952,12 +1982,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor*
-  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.#ctor
-  isExternal: true
-  name: EditorController
-  nameWithType: EditorController.EditorController
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.EditorController
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.ActiveDocument*
   commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.EditorController.ActiveDocument
   isExternal: true

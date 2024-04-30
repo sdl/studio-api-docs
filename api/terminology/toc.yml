@@ -54,6 +54,8 @@
     name: ITerminologyProviderReadOnly
   - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWinFormsUI
     name: ITerminologyProviderViewerWinFormsUI
+  - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderViewerWrapper
+    name: ITerminologyProviderViewerWrapper
   - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUI
     name: ITerminologyProviderWinFormsUI
   - uid: Sdl.Terminology.TerminologyProvider.Core.ITerminologyProviderWinFormsUIWithCreate

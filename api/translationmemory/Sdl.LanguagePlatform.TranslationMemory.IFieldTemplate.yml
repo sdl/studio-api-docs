@@ -1,0 +1,254 @@
+### YamlMime:ManagedReference
+items:
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  id: IFieldTemplate
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  children:
+  - Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+  - Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+  - Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+  langs:
+  - csharp
+  - vb
+  name: IFieldTemplate
+  nameWithType: IFieldTemplate
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  type: Interface
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nField template, V2 schema.\n"
+  syntax:
+    content: public interface IFieldTemplate
+    content.vb: Public Interface IFieldTemplate
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+  id: Guid
+  parent: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: IFieldTemplate.Guid
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nGuid\n"
+  syntax:
+    content: Guid Guid { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: ReadOnly Property Guid As Guid
+  overload: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+  id: Revision
+  parent: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  langs:
+  - csharp
+  - vb
+  name: Revision
+  nameWithType: IFieldTemplate.Revision
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\nEach change should increase Revision number\n"
+  syntax:
+    content: int Revision { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Revision As Integer
+  overload: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+  commentId: P:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+  id: Attributes
+  parent: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: IFieldTemplate.Attributes
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+  type: Property
+  source:
+    path: Sdl.LanguagePlatform.TranslationMemory
+    isExternal: true
+  assemblies:
+  - Sdl.LanguagePlatform.TranslationMemory
+  namespace: Sdl.LanguagePlatform.TranslationMemory
+  summary: "\n\n"
+  syntax:
+    content: IReadOnlyCollection<IAttribute> Attributes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemory.IAttribute}
+    content.vb: ReadOnly Property Attributes As IReadOnlyCollection(Of IAttribute)
+  overload: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Sdl.LanguagePlatform.TranslationMemory
+  commentId: N:Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: Sdl.LanguagePlatform.TranslationMemory
+  nameWithType: Sdl.LanguagePlatform.TranslationMemory
+  fullName: Sdl.LanguagePlatform.TranslationMemory
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+  isExternal: true
+  name: Guid
+  nameWithType: IFieldTemplate.Guid
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Guid
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+  isExternal: true
+  name: Revision
+  nameWithType: IFieldTemplate.Revision
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Revision
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes*
+  commentId: Overload:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+  isExternal: true
+  name: Attributes
+  nameWithType: IFieldTemplate.Attributes
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate.Attributes
+- uid: System.Collections.Generic.IReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemory.IAttribute}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Sdl.LanguagePlatform.TranslationMemory.IAttribute}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  name: IReadOnlyCollection<IAttribute>
+  nameWithType: IReadOnlyCollection<IAttribute>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Sdl.LanguagePlatform.TranslationMemory.IAttribute>
+  nameWithType.vb: IReadOnlyCollection(Of IAttribute)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Sdl.LanguagePlatform.TranslationMemory.IAttribute)
+  name.vb: IReadOnlyCollection(Of IAttribute)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    nameWithType: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+    name: IAttribute
+    nameWithType: IAttribute
+    fullName: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    nameWithType: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+    name: IAttribute
+    nameWithType: IAttribute
+    fullName: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  name: IReadOnlyCollection<>
+  nameWithType: IReadOnlyCollection<>
+  fullName: System.Collections.Generic.IReadOnlyCollection<>
+  nameWithType.vb: IReadOnlyCollection(Of )
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of )
+  name.vb: IReadOnlyCollection(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    nameWithType: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    nameWithType: IReadOnlyCollection
+    fullName: System.Collections.Generic.IReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

@@ -30,8 +30,10 @@ items:
   - Sdl.LanguagePlatform.TranslationMemory.FilterExpressionParser
   - Sdl.LanguagePlatform.TranslationMemory.FuzzyIndexes
   - Sdl.LanguagePlatform.TranslationMemory.FuzzyIndexTuningSettings
+  - Sdl.LanguagePlatform.TranslationMemory.IAttribute
   - Sdl.LanguagePlatform.TranslationMemory.IField
   - Sdl.LanguagePlatform.TranslationMemory.IFieldDefinitions
+  - Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
   - Sdl.LanguagePlatform.TranslationMemory.IFieldValueComparer`1
   - Sdl.LanguagePlatform.TranslationMemory.ILogLogger
   - Sdl.LanguagePlatform.TranslationMemory.ImportResult
@@ -44,6 +46,7 @@ items:
   - Sdl.LanguagePlatform.TranslationMemory.ImportStatistics
   - Sdl.LanguagePlatform.TranslationMemory.ImportStatus
   - Sdl.LanguagePlatform.TranslationMemory.IntFieldValue
+  - Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
   - Sdl.LanguagePlatform.TranslationMemory.ITypedKeyValueContainer
   - Sdl.LanguagePlatform.TranslationMemory.LogManager
   - Sdl.LanguagePlatform.TranslationMemory.MachineTranslationLookupMode
@@ -103,6 +106,7 @@ items:
   - Sdl.LanguagePlatform.TranslationMemory.TuIdContexts
   - Sdl.LanguagePlatform.TranslationMemory.TuLimitsValidatorSettings
   - Sdl.LanguagePlatform.TranslationMemory.Utilities
+  - Sdl.LanguagePlatform.TranslationMemory.WordCounter
   - Sdl.LanguagePlatform.TranslationMemory.WordCountFlags
   - Sdl.LanguagePlatform.TranslationMemory.WordCounts
   - Sdl.LanguagePlatform.TranslationMemory.WordCountsOptions
@@ -169,6 +173,24 @@ references:
   name: FieldIdentifier
   nameWithType: FieldIdentifier
   fullName: Sdl.LanguagePlatform.TranslationMemory.FieldIdentifier
+- uid: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+  isExternal: true
+  name: IFieldTemplate
+  nameWithType: IFieldTemplate
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IFieldTemplate
+- uid: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.IAttribute
+  isExternal: true
+  name: IAttribute
+  nameWithType: IAttribute
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IAttribute
+- uid: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
+  isExternal: true
+  name: IPicklistItem
+  nameWithType: IPicklistItem
+  fullName: Sdl.LanguagePlatform.TranslationMemory.IPicklistItem
 - uid: Sdl.LanguagePlatform.TranslationMemory.FieldValue
   commentId: T:Sdl.LanguagePlatform.TranslationMemory.FieldValue
   parent: Sdl.LanguagePlatform.TranslationMemory
@@ -798,20 +820,6 @@ references:
   name: TranslationMemoryProgress
   nameWithType: TranslationMemoryProgress
   fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationMemoryProgress
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-  parent: Sdl.LanguagePlatform.TranslationMemory
-  isExternal: true
-  name: TranslationUnitOrigin
-  nameWithType: TranslationUnitOrigin
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
-- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
-  parent: Sdl.LanguagePlatform.TranslationMemory
-  isExternal: true
-  name: TranslationUnitFormat
-  nameWithType: TranslationUnitFormat
-  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
 - uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
   parent: Sdl.LanguagePlatform.TranslationMemory
@@ -819,6 +827,20 @@ references:
   name: TranslationUnit
   nameWithType: TranslationUnit
   fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnit
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: TranslationUnitFormat
+  nameWithType: TranslationUnitFormat
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitFormat
+- uid: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
+  parent: Sdl.LanguagePlatform.TranslationMemory
+  isExternal: true
+  name: TranslationUnitOrigin
+  nameWithType: TranslationUnitOrigin
+  fullName: Sdl.LanguagePlatform.TranslationMemory.TranslationUnitOrigin
 - uid: Sdl.LanguagePlatform.TranslationMemory.TuContext
   commentId: T:Sdl.LanguagePlatform.TranslationMemory.TuContext
   parent: Sdl.LanguagePlatform.TranslationMemory
@@ -852,6 +874,12 @@ references:
   name: Utilities
   nameWithType: Utilities
   fullName: Sdl.LanguagePlatform.TranslationMemory.Utilities
+- uid: Sdl.LanguagePlatform.TranslationMemory.WordCounter
+  commentId: T:Sdl.LanguagePlatform.TranslationMemory.WordCounter
+  isExternal: true
+  name: WordCounter
+  nameWithType: WordCounter
+  fullName: Sdl.LanguagePlatform.TranslationMemory.WordCounter
 - uid: Sdl.LanguagePlatform.TranslationMemory.WordCountFlags
   commentId: T:Sdl.LanguagePlatform.TranslationMemory.WordCountFlags
   parent: Sdl.LanguagePlatform.TranslationMemory

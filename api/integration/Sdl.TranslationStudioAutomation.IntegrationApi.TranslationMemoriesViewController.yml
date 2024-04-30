@@ -5,7 +5,7 @@ items:
   id: TranslationMemoriesViewController
   parent: Sdl.TranslationStudioAutomation.IntegrationApi
   children:
-  - Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor
+  - Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
   - Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController._tmManagementService
   - Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.GetActiveTranslationUnit
   - Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.GetAllTranslationUnitsFromActivePage
@@ -107,6 +107,34 @@ items:
   - protected
   modifiers.vb:
   - Protected
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor(Sdl.Desktop.Platform.IStudioWindow)
+  id: '#ctor(Sdl.Desktop.Platform.IStudioWindow)'
+  parent: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController
+  langs:
+  - csharp
+  - vb
+  name: TranslationMemoriesViewController(IStudioWindow)
+  nameWithType: TranslationMemoriesViewController.TranslationMemoriesViewController(IStudioWindow)
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.TranslationMemoriesViewController(Sdl.Desktop.Platform.IStudioWindow)
+  type: Constructor
+  source:
+    path: Sdl.TranslationStudioAutomation.IntegrationApi
+    isExternal: true
+  assemblies:
+  - Sdl.TranslationStudioAutomation.IntegrationApi
+  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
+  syntax:
+    content: public TranslationMemoriesViewController(IStudioWindow studioWindow)
+    parameters:
+    - id: studioWindow
+      type: Sdl.Desktop.Platform.IStudioWindow
+    content.vb: Public Sub New(studioWindow As IStudioWindow)
+  overload: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   id: Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
@@ -336,31 +364,6 @@ items:
   modifiers.vb:
   - Protected
   - Overridable
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor
-  commentId: M:Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor
-  id: '#ctor'
-  parent: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController
-  langs:
-  - csharp
-  - vb
-  name: TranslationMemoriesViewController()
-  nameWithType: TranslationMemoriesViewController.TranslationMemoriesViewController()
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.TranslationMemoriesViewController()
-  type: Constructor
-  source:
-    path: Sdl.TranslationStudioAutomation.IntegrationApi
-    isExternal: true
-  assemblies:
-  - Sdl.TranslationStudioAutomation.IntegrationApi
-  namespace: Sdl.TranslationStudioAutomation.IntegrationApi
-  syntax:
-    content: public TranslationMemoriesViewController()
-    content.vb: Public Sub New
-  overload: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 references:
 - uid: Sdl.TranslationStudioAutomation.IntegrationApi
   commentId: N:Sdl.TranslationStudioAutomation.IntegrationApi
@@ -1184,6 +1187,17 @@ references:
   name: ITranslationMemoryManagementService
   nameWithType: ITranslationMemoryManagementService
   fullName: Sdl.TranslationStudio.Api.TranslationMemoryManager.ITranslationMemoryManagementService
+- uid: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor*
+  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor
+  isExternal: true
+  name: TranslationMemoriesViewController
+  nameWithType: TranslationMemoriesViewController.TranslationMemoriesViewController
+  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.TranslationMemoriesViewController
+- uid: Sdl.Desktop.Platform.IStudioWindow
+  isExternal: true
+  name: IStudioWindow
+  nameWithType: IStudioWindow
+  fullName: Sdl.Desktop.Platform.IStudioWindow
 - uid: Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   commentId: M:Sdl.Desktop.IntegrationApi.AbstractViewController.Initialize(Sdl.Desktop.IntegrationApi.IViewContext)
   parent: Sdl.Desktop.IntegrationApi.AbstractViewController
@@ -1396,9 +1410,3 @@ references:
   name: GetTranslationMemoryManagementService
   nameWithType: TranslationMemoriesViewController.GetTranslationMemoryManagementService
   fullName: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.GetTranslationMemoryManagementService
-- uid: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor*
-  commentId: Overload:Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.#ctor
-  isExternal: true
-  name: TranslationMemoriesViewController
-  nameWithType: TranslationMemoriesViewController.TranslationMemoriesViewController
-  fullName: Sdl.TranslationStudioAutomation.IntegrationApi.TranslationMemoriesViewController.TranslationMemoriesViewController

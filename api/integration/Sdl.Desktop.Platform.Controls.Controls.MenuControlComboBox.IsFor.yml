@@ -7,6 +7,7 @@ items:
   children:
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.BatchTasks
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.Files
+  - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.General
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.NewProject
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.Project
   - Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.Translate
@@ -161,6 +162,33 @@ items:
   namespace: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
   syntax:
     content: Files = 4
+    return:
+      type: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.General
+  commentId: F:Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.General
+  id: General
+  parent: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor
+  langs:
+  - csharp
+  - vb
+  name: General
+  nameWithType: IsFor.General
+  fullName: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor.General
+  type: Field
+  source:
+    path: Sdl.Desktop.Platform.Controls
+    isExternal: true
+  assemblies:
+  - Sdl.Desktop.Platform.Controls
+  namespace: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox
+  syntax:
+    content: General = 5
     return:
       type: Sdl.Desktop.Platform.Controls.Controls.MenuControlComboBox.IsFor
   modifiers.csharp:
